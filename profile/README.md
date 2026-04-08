@@ -1,6 +1,7 @@
 # animagram
 
-Here, "anima" is name of concepts and existences, "gram" is name of wired expression(formatted to human language or computer bits).
+Here, "anima" is name of concepts and existences.
+The word "gram" is name of wired expression (formatted to human language or computer bits).
 Now I, Andyou is solo-working here in public. 
 
 ## rule
