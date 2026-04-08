@@ -1,4 +1,4 @@
-//! this file contents partially includes contents that untranslated (Japanese) expressions.
+// this file contents partially includes contents that untranslated (Japanese) expressions.
 
 # animagram-rule
 
@@ -11,7 +11,7 @@ Rule of all project of animagram
 保守の都合、日本語原文だけの部分のあるドキュメント1行目には、以下のように明示する
 
 ```text
-//! this file contents partially includes contents that untranslated (Japanese) expressions.
+// this file contents partially includes contents that untranslated (Japanese) expressions.
 ```
 
 ### code
