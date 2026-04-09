@@ -20,14 +20,12 @@ Rule of all project of animagram
 
 ### use宣言
 
-- `use`で宣言できるものは**全てファイル先頭に列挙**する。本文中の`core::`/`alloc::`/`std::`インライン参照は禁止
-- 順序: `core` → `alloc` → `std`(cfg付き) → `crate`
-- 複数importは同一crateをネストしてまとめる
-- `std`依存は`#[cfg(feature = "std")]`で明示。テスト限定なら`#[cfg(all(test, feature = "std"))]`
-- `f64`メソッド(`.sqrt()`等)のcfgガードはskip（Rustの実装詳細）
-- `vec!`/`format!`マクロもno_std下では`use alloc::{vec, format};`が必要
-- `std` featureはCargo.tomlで`default = ["std"]`にしておき、no_std確認時は`--no-default-features`で行う
-- `#![no_std]`はlib.rs先頭に宣言。確認前の作業中はコメントアウトで進めてよい
+- `use`で宣言できるものは**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
+- 順序: `core` → `alloc` → `std` → `crate` -> cfg付き (以下、順序再帰)
+- 同一モジュールはまとめて列挙する。数個なら改行する
+- アトリビュート`#[cfg(all(test, feature = "std"))]`などで制御
+- no_std制限が想定されるプロジェクトでは、no_std宣言をlibやmainの冒頭でコメントアウトしておくと、意識してコーディングしやすい
+- 必ずstdやno_stdをfeature化する必要はない。どちらでも動く1通りが最善
 
 ```rust
 // use宣言 実装例
