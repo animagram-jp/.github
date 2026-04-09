@@ -1,4 +1,4 @@
-//! this file contents partially includes contents that untranslated (Japanese) expressions.
+// this file partially includes contents that untranslated (Japanese) expressions.
 
 # animagram-rule
 
@@ -11,12 +11,12 @@ Rule of all project of animagram
 保守の都合、日本語原文だけの部分のあるドキュメント1行目には、以下のように明示する
 
 ```text
-//! this file contents partially includes contents that untranslated (Japanese) expressions.
+// this file partially includes contents that untranslated (Japanese) expressions.
 ```
 
 ### code
 
-以下、Rustを例に使用。コーディング言語が違う場合は適切に読み替えること
+以下、Rustを例に使用。異なるコーディング言語は、適切に読み替えること
 
 ### use宣言
 
