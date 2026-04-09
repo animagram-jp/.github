@@ -24,7 +24,7 @@ Rule of all project of animagram
 - 順序: `core` → `alloc` → `std` → `crate` -> cfg付き (以下、順序再帰)
 - 同一モジュールはまとめて列挙する。数個なら改行する
 - アトリビュート`#[cfg(all(test, feature = "std"))]`などで制御
-- no_std制限が想定されるプロジェクトでは、no_std宣言をlibやmainの冒頭でコメントアウトしておくと、意識してコーディングしやすい
+- std制限が予想されるプロジェクトでは、no_std宣言をlibやmainの冒頭でコメントアウトしておくと、意識してコーディングしやすい
 - 必ずstdやno_stdをfeature化する必要はない。どちらでも動く1通りが最善
 
 ```rust
