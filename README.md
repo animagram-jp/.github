@@ -1,4 +1,4 @@
-// this file partially includes contents that untranslated (Japanese) expressions.
+// this file includes contents that untranslated expressions (ja).
 
 # animagram-rule
 
@@ -11,11 +11,12 @@ Common for projects in animagram
 保守の都合、日本語原文だけの部分のあるドキュメント1行目には、以下のように明示する
 
 ```text
-// this file partially includes contents that untranslated (Japanese) expressions.
+// this file includes contents that untranslated expressions (ja).
 ```
 
 ### code
 
+Write scripts with only ASCII. Because English is suitable for naming and ASCII decoder is ubiquitous.
 以下、Rustを例に使用。異なるコーディング言語は、適切に読み替えること
 
 ### use宣言
