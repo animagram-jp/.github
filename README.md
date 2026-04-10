@@ -2,7 +2,7 @@
 
 # animagram-rule
 
-Rule of all project of animagram
+Common for projects in animagram
 
 ## Contribution
 
