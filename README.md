@@ -19,7 +19,7 @@ Common for projects in animagram
 Write scripts with only ASCII. Because English is suitable for naming and ASCII decoder is ubiquitous.
 以下、Rustを例に使用。異なるスタックの場合は、適切に読み替えること
 
-### 依存宣言の徹底
+#### Use
 
 - `use`で宣言できるものは**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
 - 順序: `core` → `alloc` → `std` → `crate` -> cfg付き (以下、順序再帰)
@@ -49,7 +49,7 @@ use std::fs;
 use crate::module;
 ```
 
-### エラー型
+#### Error
 
 - `std::error::Error` implはno_std非対応のため使わない
 - モジュール固有のエラー型(`SvdError`等)はそのmodで定義し、crateのpub Error enumでラップ(`Error::Svd(SvdError)`)
@@ -77,60 +77,17 @@ impl fmt::Display for SvdError {
 }
 ```
 
-## テンプレート
+#### Comment
 
-```rust
-// #![no_std]
-extern crate core;
-extern crate alloc;
-extern xrate std;
-use core::{
-    primitive::{
-        u8, u16, u32, u64, u128, usize,
-        i8, i16, i32, i64, i128, isize,
-        f32, f64,
-        bool,
-        char,str,
-    },
-    alloc::{GlobalAlloc, Layout},
-    fm,
-    result,
-    panic::Panicinfo,
-};
-use alloc::{
-    vec::Vec,
-    boxed::Box,
-    sync::Arc,
-};
-use log::{Log, Record};
+- pub fn: doctestを書く。意義のあるtestを書き、newなどはコメント無しで良い
+- pub struct等, (private) fn: その存在の趣旨を1行コメント(///)で説明
+- fn内、必要な個所には適宜インラインコメント(//)で説明する
 
-#[cfg(feature = "nightly")]
-use core::intrinsics::abort;
+#### Test
 
-struct Allocator;
-
-unsafe impl GlobalAlloc for Allocator {
-    unsafe fn alloc(&self, layout: Layout) -> *mut u8 {
-        core::ptr::null_mut()
-    }
-    unsafe fn dealloc(&self, ptr: *mut u8, layout: Layout) { }
-}
-
-#[global_allocator]
-static ALLOCATOR: Allocator = Allocator;
-
-macro_rules! debug_log {
-    ($($arg:tt)*) => {{
-        #[cfg(feature = "logging")]
-        { log::debug!($($arg)*); }
-    }};
-}
-
-#[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
-    debug_log!("panic: {}", info);
-    #[cfg(feature = "nightly")]
-    unsafe { abort() };
-    loop {}
-}
-```
+- doctestと重複が無いようにUnitTestを作成する
+- testはstd及びexamples/以下に依存して構わない。むしろ、インラインのデータセット定義を避ける
+- グループをコメントで区切る（// --- traverse ---）
+- fn名は `{対象}_{条件}` 形式（test_ 不要）
+- エラーケース・境界ケースを明示的に書く
+- integration testとして、examples/にて受け入れ側をインメモリモックimplとデータセットファイルで徹底して再現した上で、 提供portsを検証する
