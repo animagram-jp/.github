@@ -6,15 +6,13 @@ Common for projects in animagram
 
 ## Contribution
 
-### file
+### Writing
 
-保守の都合、日本語原文だけの部分のあるドキュメント1行目には、以下のように明示する
+保守の都合、日本語原文だけの部分のあるドキュメントの1行目には、以下のように明示する
 
 ```text
 // this file includes contents that untranslated expressions (ja).
 ```
-
-### code
 
 Write scripts with only ASCII. Because English is suitable for naming and ASCII decoder is ubiquitous.
 以下、Rustを例に使用。異なるコーディング言語は、適切に読み替えること
@@ -57,9 +55,10 @@ use crate::my_module;
 ## テンプレート
 
 ```rust
-#![no_std]
+// #![no_std]
 extern crate core;
 extern crate alloc;
+extern xrate std;
 use core::{
     primitive::{
         u8, u16, u32, u64, u128, usize,
@@ -109,7 +108,6 @@ unsafe impl GlobalAlloc for Allocator {
 
 #[global_allocator]
 static ALLOCATOR: Allocator = Allocator;
-
 
 macro_rules! debug_log {
     ($($arg:tt)*) => {{
