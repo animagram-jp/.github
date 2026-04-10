@@ -1,4 +1,4 @@
-// this file includes contents that untranslated expressions (ja).
+// This file includes contents that untranslated expressions (ja).
 
 # animagram-rule
 
@@ -11,7 +11,7 @@ Common for projects in animagram
 保守の都合、日本語原文だけの部分のあるドキュメントの1行目には、以下のように明示する
 
 ```text
-// this file includes contents that untranslated expressions (ja).
+// This file includes contents that untranslated expressions (ja).
 ```
 
 ### Script

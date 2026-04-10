@@ -6,4 +6,4 @@
 
 ## rule
 
-- [common for projects](https://github.com/animagram-jp/.github/blob/main/README.md)
+- [common for projects](https://github.com/animagram-jp/.github/blob/main/Rule.md)
