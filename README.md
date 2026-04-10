@@ -30,7 +30,6 @@ Write scripts with only ASCII. Because English is suitable for naming and ASCII 
 
 ```rust
 // examples
-extern crate alloc;
 use core::{
     cmp::Ordering,
     f64::consts::PI,
