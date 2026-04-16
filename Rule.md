@@ -15,7 +15,9 @@ This is for easy reading by human and computers.
 [important] Single word naming is always best.
 
 - directory:  snake_case (I think kebab-case is also good unless for scripts)
-- File:       CamelCase
+- File:
+  - Document: CamelCase
+  - script:   snake_case
 - md outline: Capitalized with space
 - sentence:   Capitalized with space and .
 
