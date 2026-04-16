@@ -6,6 +6,21 @@ Common for projects in animagram
 
 ## Contribution
 
+### Writing
+
+#### Name format
+
+This is for easy reading by human and computers. 
+
+[important] Single word naming is always best.
+
+- directory:  snake_case (I think kebab-case is also good unless for scripts)
+- File:       CamelCase
+- md outline: Capitalized with space
+- sentence:   Capitalized with space and .
+
+Abbreviations follow the same rule as normal words.
+
 ### Document
 
 保守の都合、日本語原文だけの部分のあるドキュメントの1行目には、以下のように明示する
@@ -19,7 +34,7 @@ Common for projects in animagram
 Write scripts with only ASCII. Because English is suitable for naming and ASCII decoder is ubiquitous.
 以下、Rustを例に使用。異なるスタックの場合は、適切に読み替えること
 
-#### Use
+#### Dependency
 
 - `use`で宣言できるものは**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
 - 順序: `core` → `alloc` → `std` → `crate` -> cfg付き (以下、順序再帰)
