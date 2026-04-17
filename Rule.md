@@ -1,4 +1,4 @@
-// This file includes contents that untranslated expressions (ja).
+// This file includes untranslated text (ja).
 
 # animagram-rule
 
@@ -12,36 +12,36 @@ Common for projects in animagram
 
 This is for easy reading by human and computers. 
 
-[important] Single word naming is always best.
+**Single word naming is always best.**
 
-- directory:  snake_case (I think kebab-case is also good unless for scripts)
-- File:
+- directory:  snake_case (I think kebab-case is also good unless for scripts.)
+- file:
   - Document: CamelCase
   - script:   snake_case
 - md outline: Capitalized with space
 - sentence:   Capitalized with space and .
 
-Abbreviations follow the same rule as normal words.
+Abbreviations follow the same rule as others.
 
 ### Document
 
-保守の都合、日本語原文だけの部分のあるドキュメントの1行目には、以下のように明示する
+When written in Japanese for maintainability, state on the 1st line the following:
 
 ```text
-// This file includes contents that untranslated expressions (ja).
+// This file includes untranslated text (ja).
 ```
 
 ### Script
 
-Write scripts with only ASCII. Because English is suitable for naming and ASCII decoder is ubiquitous.
-以下、Rustを例に使用。異なるスタックの場合は、適切に読み替えること
+Write scripts with only ASCII.
+The following example uses Rust. When using a different stack, adapt it accordingly.
 
 #### Dependency
 
-- `use`で宣言できるものは**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
-- 順序: `core` → `alloc` → `std` → `crate` -> cfg付き (以下、順序再帰)
-- 同一モジュールはまとめて列挙する。数個なら改行する
-- アトリビュート`#[cfg(all(test, feature = "std"))]`などで制御
+- 依存関係とは、単に第三者のモジュールだけでなく、そのfile内に記述されない全てのスクリプトを指す。
+- `use`で明示可能な依存は**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
+- 順序: `core` → `alloc` → `std` → `crate` -> attribute付き (`core` → `alloc` → `std` → `crate`)
+- 同一モジュールはまとめて列挙する。数個程度なら改行する
 - std制限が予想されるプロジェクトでは、予めコメントアウトしたno_std宣言をルートファイルに書いておく
 - 必ずstdやno_stdをfeature化する必要はない。どちらでも動く1通りが最善
 
@@ -95,15 +95,15 @@ impl fmt::Display for SvdError {
 
 #### Comment
 
-- pub fn: doctestを書く。意義のあるtestを書き、newなどはコメント無しで良い
+- pub fn: doctestを書く。意義のあるtestを書き、newなどはコメント・docTest無しでよい
 - pub struct等, (private) fn: その存在の趣旨を1行コメント(///)で説明
-- fn内、必要な個所には適宜インラインコメント(//)で説明する
+- fn内、必要な個所には適宜インラインコメント(//)で意図を名言する
 
 #### Test
 
 - doctestと重複が無いようにUnitTestを作成する
 - testはstd及びexamples/以下に依存して構わない。むしろ、インラインのデータセット定義を避ける
-- グループをコメントで区切る（// --- traverse ---）
+- グループをコメントで区切る（e.g., `// --- traverse ---`）
 - fn名は `{対象}_{条件}` 形式（test_ 不要）
 - エラーケース・境界ケースを明示的に書く
 - integration testとして、examples/にて受け入れ側をインメモリモックimplとデータセットファイルで徹底して再現した上で、 提供portsを検証する
