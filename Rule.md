@@ -2,11 +2,20 @@
 
 # animagram-rule
 
-Common for projects in animagram
+These are common rules for projects in animagram.
 
 ## Contribution
 
 ### Writing
+
+#### Directory and file
+
+- READEME.md: project name, problem & solution, quick start, commands, etc.
+- docs/Architecture.md: structure of requirements, functions, diagram of processes, modules, script files, etc.
+- LICENSE: apache-2.0, author.
+- .gitignore: *.lock, target, etc.
+- src: script files.
+- examples: static data files, datasets for test, example, etc.
 
 #### Name format
 
@@ -14,7 +23,7 @@ This is for easy reading by human and computers.
 
 **Single word naming is always best.**
 
-- directory:  snake_case (I think kebab-case is also good unless for scripts.)
+- directory:  snake_case (I think kebab-case is also good unless for script.)
 - file:
   - Document: CamelCase
   - script:   snake_case
@@ -35,75 +44,85 @@ When written in Japanese for maintainability, state on the 1st line the followin
 
 Write scripts with only ASCII.
 The following example uses Rust. When using a different stack, adapt it accordingly.
+These are for comprehensive understanding of scripts.
 
-#### Dependency
+#### Dependencies
 
-- 依存関係とは、単に第三者のモジュールだけでなく、そのfile内に記述されない全てのスクリプトを指す。
-- `use`で明示可能な依存は**全てファイル先頭に列挙**する。本文中の単独インライン参照は禁止
-- 順序: `core` → `alloc` → `std` → `crate` -> attribute付き (`core` → `alloc` → `std` → `crate`)
-- 同一モジュールはまとめて列挙する。数個程度なら改行する
-- std制限が予想されるプロジェクトでは、予めコメントアウトしたno_std宣言をルートファイルに書いておく
-- 必ずstdやno_stdをfeature化する必要はない。どちらでも動く1通りが最善
+- Dependencies refer not only to third-party modules but to all callings defined outside of itself.
+- Declare it not only in root (lib.rs), but each script file in its 1st block.
+- Prohibit individual inline references below the declaration block.
+- Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
+- Witout projects heap limitations are never useful, include a commented-out `no_std` declaration in the root file in advance.
+- The ideal approach is a single feature that works in both `std` or `no_std` environments.
 
 ```rust
 // examples
+
+// #![no_std]
+extern crate core;
+extern crate alloc;
+extern crate std;
 use core::{
-    cmp::Ordering,
-    f64::consts::PI,
+    primitive::{u8, u64, usize, i64, str}, 
+    fmt::{Display, Result, Formatter},
 };
-use alloc::{
-    collections::BTreeSet,
-    format,
-    string::String,
-    vec,
+use alloc::{ 
+    collections::{BTreeMap, BTreeSet},
+    string::{String, ToString},
     vec::Vec,
 };
 
 #[cfg(test)]
 use std::fs;
 
-use crate::module;
+use crate::{
+    list::{List, VariableList},
+    debug_log,
+}
 ```
 
 #### Error
 
-- `std::error::Error` implはno_std非対応のため使わない
-- モジュール固有のエラー型(`SvdError`等)はそのmodで定義し、crateのpub Error enumでラップ(`Error::Svd(SvdError)`)
-- ルートファイル等にpub Error / pub Resultを集約することで、利用者がエラー処理を網羅実装できる
+This is for comprehensive export of error within softwear for me, and comprehensive implement for users.
+
+- Do not use `std::error::Error` implementations as they are not compatible with no_std.
+- Define an item for each module (such as `ListError`), and wrap them in the public Error item (e.g., `VariableListError::List(ListError)`).
 
 ```rust
 // examples
 
-/// Error type for SVD operations
-#[derive(Debug, Clone)]
-pub enum SvdError {
-    DimensionMismatch,
-    ConvergenceFailed,
-    InvalidInput(&'static str),
+#[derive(Debug)]
+pub enum ListError {
+    OutOfBounds,
+    NotExist,
+}
+#[derive(Debug)]
+pub enum VariableListError {
+    List(ListError),
+    Compact,
 }
 
-impl fmt::Display for SvdError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            SvdError::DimensionMismatch => write!(f, "dimension mismatch"),
-            SvdError::ConvergenceFailed => write!(f, "convergence failed"),
-            SvdError::InvalidInput(msg) => write!(f, "invalid input: {}", msg),
-        }
+impl Display for ListError {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "{:?}", self)
     }
 }
 ```
 
 #### Comment
 
-- pub fn: doctestを書く。意義のあるtestを書き、newなどはコメント・docTest無しでよい
-- pub struct等, (private) fn: その存在の趣旨を1行コメント(///)で説明
-- fn内、必要な個所には適宜インラインコメント(//)で意図を名言する
+This is for minimization maintenance costs.
+
+- Write a outer line DocComment for each public item.
+- Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
+- Write a DocTest when needed for each private fun.
+- Inside functions, clearly state the intent with inline comments where necessary.
 
 #### Test
 
-- doctestと重複が無いようにUnitTestを作成する
-- testはstd及びexamples/以下に依存して構わない。むしろ、インラインのデータセット定義を避ける
-- グループをコメントで区切る（e.g., `// --- traverse ---`）
-- fn名は `{対象}_{条件}` 形式（test_ 不要）
-- エラーケース・境界ケースを明示的に書く
-- integration testとして、examples/にて受け入れ側をインメモリモックimplとデータセットファイルで徹底して再現した上で、 提供portsを検証する
+This is for minimization maintenance costs.
+
+- Write unit tests that is not duplicating with DocTest.
+- Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
+- Names of test functions should follow the format {target}_{condition} (omit test_).
+- When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
