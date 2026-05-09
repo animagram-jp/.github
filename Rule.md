@@ -1,5 +1,3 @@
-// This file includes untranslated text (ja).
-
 # animagram-rule
 
 These are common rules for projects in animagram.

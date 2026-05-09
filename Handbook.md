@@ -1,11 +1,10 @@
-// This file includes contents that untranslated expressions (ja).
+// This file includes untranslated text (ja).
+// This is uncompleted draft.
 
-// This is uncompleted draft of handbook of system developers.
-
-# ITエンジニア研修ハンドブック
+# Handbook for developing web-system
 
 このガイドは、普段スマートフォンやコンピューターでネットを利用しているけれど、Webシステムの開発はしたことがない人に向けて書かれています。
-このガイドの内容を理解することで、Webシステムとは何か、どういう点が優れていて、開発や運用には何が必要なのか、システム開発に必要な知識を身に着けることができます。
+このガイドの内容を理解することで、Webシステムとは何か、どういう点が優れていて、開発や運用には何が必要なのか、webシステム開発に必要な知識を身に着けることができます。
 
 ## 目次
 
