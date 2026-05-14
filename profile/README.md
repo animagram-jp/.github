@@ -10,4 +10,12 @@
 
 ## Materials
 
-Rust, Write-Ahead Log, WebAssembly, browsers, opfs, html, css, javascript, etc.
+Rust, Write-Ahead Log, WebAssembly, browsers, opfs, html, css, etc.
+
+## Projects
+
+- web system: wasm in browser, p2p, temporal data structure, wal & opfs, pwa
+- oss library(flair): FLAIR, wasm compilable, datetime series forcast, matrics calculation
+- app core(context-engine): terminal and fixture web system, precompile, dsl
+- oss library(css): DADS, universal design
+- handbook writing: how to develop a web systems, computer engineering, network engineering, namespace of concepts
