@@ -32,6 +32,8 @@ Abbreviations follow the same rule as others.
 
 ### Document
 
+This is for easy reading and comprehensive understanding of all within a repository by human.
+
 When written in Japanese for maintainability, state on the 1st line the following:
 
 ```text
