@@ -16,8 +16,8 @@
 
 ### app
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop?label=develop)
 
 Gui application for editing and reading structured data with web.
 
@@ -25,8 +25,8 @@ Gui application for editing and reading structured data with web.
 
 ### flair
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop?label=develop)
 
 Wasm-compilable implement of time series forecasting algorithm FLAIR.
 
@@ -34,8 +34,8 @@ Wasm-compilable implement of time series forecasting algorithm FLAIR.
 
 ### context-engine
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine/develop)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine/develop?label=develop)
 
 Declarative context management for request handlers.
 
@@ -44,7 +44,7 @@ Declarative context management for request handlers.
 
 ### css
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/main?label=main)
 
 Css universal design boilerplate.
 
@@ -53,7 +53,7 @@ Css universal design boilerplate.
 
 ### handbook
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/.github/main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/.github/main?label=main)
 
 - repository: [.github](https://github.com/animagram-jp/.github)
 - materials: `network engineering`, `computer engineering` ,`namespace of conecepts`
