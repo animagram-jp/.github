@@ -19,16 +19,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop?label=develop)
 
-Gui application system for editing and reading structured data with web.
+Gui application system for editing and reading structured data.
 
 - materials: `browsers`, `Wasm`, `Rust`, `webRTC`, `temporal data structure`, `Wal`, `OPFS`, `PWA`, `context-engine`
-
-### flair
-
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop?label=develop)
-
-Wasm-compilable implement of time series forecasting algorithm FLAIR.
 
 - materials: `FLAIR`, `SVD`, `Rust`
 
@@ -39,8 +32,14 @@ Wasm-compilable implement of time series forecasting algorithm FLAIR.
 
 Declarative context management for request handlers.
 
-
 - materials: `YAML`, `Rust`
+
+### flair
+
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop?label=develop)
+
+Wasm-compilable implement of time series forecasting algorithm FLAIR.
 
 ### css
 
