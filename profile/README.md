@@ -34,7 +34,7 @@ Declarative context management for request handlers.
 Eliminates the asymmetry between server and client scripts using a YAML DSL.
 
 - repository: [context-engine](https://github.com/animagram-jp/context-engine)
-- materials: `YAML`, `Rust`
+- materials: `YAML`, `no_std Rust`
 
 ### flair
 
@@ -45,7 +45,7 @@ Wasm-compilable implement of time series forecasting algorithm FLAIR.
 Runs entirely in the browser and provides self-estimated forecast confidence.
 
 - repository: [flair](https://github.com/animagram-jp/flair)
-- materials: `FLAIR`, `SVD`, `Rust`
+- materials: `FLAIR`, `SVD`, `no_std Rust`
 
 ### css
 
