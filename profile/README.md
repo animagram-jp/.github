@@ -19,7 +19,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop?label=develop)
 
-Gui application for editing and reading structured data with web.
+Gui application system for editing and reading structured data with web.
 
 - materials: `browsers`, `Wasm`, `Rust`, `webRTC`, `temporal data structure`, `Wal`, `OPFS`, `PWA`, `context-engine`
 
