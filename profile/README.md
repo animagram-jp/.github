@@ -2,7 +2,7 @@
 
 - The word "anima" is name of concepts and existences.
 - The word "gram" is name of written expression (human language or commands to computers).
-- Now I, Andyou am solo-working here in public for ubiquitous helper for daily life. 
+- Now I, Andyou am solo-working here in public for ubiquitous helper of daily life. 
 
 ## Rule
 
