@@ -50,6 +50,7 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 ### css
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/main?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/develop?label=develop)
 
 Css universal design boilerplate.
 Works without interference to HTML.
