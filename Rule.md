@@ -109,6 +109,13 @@ impl Display for ListError {
 }
 ```
 
+#### Literal quote
+
+This is for easy of stack changing.
+
+- slicable string: "" e.g., "", "ab"
+- unslicable char: '' e.g., 'あ'
+
 #### Comment
 
 This is for minimization maintenance costs.
