@@ -1,6 +1,6 @@
 # animagram-rule
 
-These are common rules for projects in animagram.
+Here are common rules for projects in animagram.
 
 ## Contribution
 
@@ -21,10 +21,13 @@ This is for easy reading by human and computers.
 
 **Single word naming is always best.**
 
-- directory:  snake_case (I think kebab-case is also good unless for script.)
+- directory:  snake_case (Kebab-case is also good unless for script.)
 - file:
-  - Document: CamelCase
-  - script:   snake_case
+    - Document: CamelCase
+    - script:   snake_case
+        - varaiable: snake_case (with kebab-case is also good in static format.)
+    - data_format: snake_case
+        - key:  snake_case (with kebab-case for 2 diffrent degrees of relation.)
 - md outline: Capitalized with space
 - sentence:   Capitalized with space and .
 
@@ -118,7 +121,7 @@ This is for easy of stack changing.
 
 #### Comment
 
-This is for minimization maintenance costs.
+This is for minimum maintenance costs.
 
 - Write a outer line DocComment for each public item.
 - Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
@@ -127,9 +130,9 @@ This is for minimization maintenance costs.
 
 #### Test
 
-This is for minimization maintenance costs.
+This is for minimum maintenance costs.
 
 - Write unit tests that is not duplicating with DocTest.
 - Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
-- Names of test functions should follow the format {target}_{condition} (omit test_).
+- Names of test functions should follow the format `{target}_{condition}` (omit test_).
 - When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
