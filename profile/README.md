@@ -14,7 +14,7 @@
 
 ## Projects
 
-### app
+### [app](https://github.com/animagram-jp/app)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop?label=develop)
@@ -22,10 +22,9 @@
 Gui application system for editing and reading structured data.
 Handles event loop by Wasm App with some static glue JavaScript.
 
-- repository: [app](https://github.com/animagram-jp/app)
 - materials: `browsers`, `Wasm`, `Rust`, `webRTC`, `temporal data structure`, `Wal`, `OPFS`, `PWA`, `context-engine`
 
-### context-engine
+### [context-engine](https://github.com/animagram-jp/context-engine)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine/develop?label=develop)
@@ -33,10 +32,9 @@ Handles event loop by Wasm App with some static glue JavaScript.
 Declarative context management for request handlers.
 Eliminates the asymmetry between server and client scripts using a YAML DSL.
 
-- repository: [context-engine](https://github.com/animagram-jp/context-engine)
 - materials: `YAML`, `no_std Rust`
 
-### flair
+### [flair](https://github.com/animagram-jp/flair)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop?label=develop)
@@ -44,10 +42,9 @@ Eliminates the asymmetry between server and client scripts using a YAML DSL.
 Wasm-compilable implement of time series forecasting algorithm FLAIR.
 Runs entirely in the browser and provides self-estimated forecast confidence.
 
-- repository: [flair](https://github.com/animagram-jp/flair)
 - materials: `FLAIR`, `SVD`, `no_std Rust`
 
-### css
+### [dads](https://github.com/animagram-jp/dads)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/main?label=main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/develop?label=develop)
@@ -55,12 +52,8 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 Css universal design boilerplate.
 Works without interference to HTML.
 
-- repository: [dads](https://github.com/animagram-jp/dads)
 - materials: `DADS`, `CSS`, `HTML`, `Javascript`
 
-### handbook (draft)
+### [handbook (draft)](../Handbook.md)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/.github/main?label=main)
-
-- repository: [.github](https://github.com/animagram-jp/.github)
 - materials: `network engineering`, `computer engineering` ,`namespace of conecepts`
