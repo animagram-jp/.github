@@ -6,6 +6,10 @@ Here are common rules for projects in animagram.
 
 ### Writing
 
+This is for easy reading by human and computers.
+
+- Use tab(0x09) or 4 spaces(0x20) for indentation.
+
 #### Directory and file
 
 - READEME.md: project name, problem & solution, quick start, commands, etc.
@@ -16,8 +20,6 @@ Here are common rules for projects in animagram.
 - examples: static data files, datasets for test, example, etc.
 
 #### Name format
-
-This is for easy reading by human and computers. 
 
 **Single word naming is always best.**
 
@@ -66,10 +68,10 @@ extern crate core;
 extern crate alloc;
 extern crate std;
 use core::{
-    primitive::{u8, u64, usize, i64, str}, 
+    primitive::{u8, u64, usize, i64, str},
     fmt::{Display, Result, Formatter},
 };
-use alloc::{ 
+use alloc::{
     collections::{BTreeMap, BTreeSet},
     string::{String, ToString},
     vec::Vec,
@@ -136,3 +138,9 @@ This is for minimum maintenance costs.
 - Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
 - Names of test functions should follow the format `{target}_{condition}` (omit test_).
 - When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
+
+#### Html
+
+- formatting rule:
+    - Do not insert a line break before a closing tag.
+    - Insert a line break before the start of every tag.
