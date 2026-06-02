@@ -44,10 +44,10 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
 
-### [dads](https://github.com/animagram-jp/dads)
+### [css](https://github.com/animagram-jp/css)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/main?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/dads/develop?label=develop)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/develop?label=develop)
 
 Css universal design boilerplate.
 Works without interference to HTML.
