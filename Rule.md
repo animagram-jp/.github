@@ -14,7 +14,7 @@ Here are common rules for projects in animagram.
 |-|-|-|
 | bug | Something isn't working. | #d73a4a |
 | controverse | What we should talk about. | #5B2F91 |
-| improvement | A way we can improve the repogitory. | #259d63 |
+| improvement | A way we can improve the repository. | #259d63 |
 
 ### Writing
 
