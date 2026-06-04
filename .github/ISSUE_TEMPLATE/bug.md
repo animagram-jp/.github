@@ -3,7 +3,7 @@ name: bug
 about: Issue a bug report
 title: "[bug] "
 labels: bug
-assignees: "Andyou <andyou@animagram.jp>"
+assignees: "Andyou007"
 ---
 
 ## Subject
