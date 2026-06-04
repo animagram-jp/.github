@@ -3,7 +3,7 @@ name: improvement
 about: Add improvement issue
 title: "[improvement] "
 labels: improvement
-assignees: "Andyou <andyou@animagram.jp>"
+assignees: "Andyou007"
 ---
 
 ## Subject
