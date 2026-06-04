@@ -3,7 +3,7 @@ name: controverse
 about: Issue a controverse what we should talk about.
 title: "[controverse]"
 labels: controverse
-assignees: "Andyou <andyou@animagram.jp>"
+assignees: "Andyou007"
 ---
 
 ## Subject
