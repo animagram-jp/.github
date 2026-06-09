@@ -4,6 +4,8 @@
 - The word "gram" is name of written expression (human language or commands to computers).
 - Now I, Andyou am solo-working here in public for ubiquitous helper of daily life. 
 
+- theme color: #5B2F91
+
 ## Rule
 
 - [common for projects](https://github.com/animagram-jp/.github/blob/main/Rule.md)
@@ -57,7 +59,3 @@ Works without interference to HTML.
 ### [handbook (draft)](../Handbook.md)
 
 - materials: `network engineering`, `computer engineering` ,`namespace of conecepts`
-
-## Profile
-
-- theme color: #5B2F91
