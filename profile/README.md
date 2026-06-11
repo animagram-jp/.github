@@ -19,7 +19,6 @@
 ### [app](https://github.com/animagram-jp/app)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app/develop?label=develop)
 
 Gui application system for editing and reading structured data.
 Handles event loop by Wasm App with some static glue JavaScript.
@@ -29,7 +28,6 @@ Handles event loop by Wasm App with some static glue JavaScript.
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine/develop?label=develop)
 
 Declarative context management for request handlers.
 Eliminates the asymmetry between server and client scripts using a YAML DSL.
@@ -39,7 +37,6 @@ Eliminates the asymmetry between server and client scripts using a YAML DSL.
 ### [flair](https://github.com/animagram-jp/flair)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair/develop?label=develop)
 
 Wasm-compilable implement of time series forecasting algorithm FLAIR.
 Runs entirely in the browser and provides self-estimated forecast confidence.
@@ -49,7 +46,6 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 ### [css](https://github.com/animagram-jp/css)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/develop?label=develop)
 
 Css universal design boilerplate.
 Works without interference to HTML.
