@@ -23,7 +23,7 @@
 Gui application system for editing and reading structured data.
 Handles event loop by Wasm App with some static glue JavaScript.
 
-- materials: `browsers`, `Wasm`, `Rust`, `webRTC`, `temporal data structure`, `Wal`, `OPFS`, `PWA`, `context-engine`
+- materials: `web standard`, `Wasm`, `Rust`,`transaction log`, `OPFS`, `Service Worker`
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
