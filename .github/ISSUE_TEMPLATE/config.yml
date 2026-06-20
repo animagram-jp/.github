@@ -1,5 +1,5 @@
 blank_issues_enabled: false  # 空のIssue作成を無効化
 contact_links:
   - name: Support link
-    url: https://github.com/orgs/animagram-jp/discussions
+    url: https://github.com/orgs/animagram-jp/discussions/categories/q-a
     about: Take it easy.
