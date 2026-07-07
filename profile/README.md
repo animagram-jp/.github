@@ -8,7 +8,7 @@
 
 ## Rule
 
-- [common for projects](https://github.com/animagram-jp/.github/blob/main/Rule.md)
+- [common for projects](https://github.com/animagram-jp/.github/blob/main/CONTRIBUTING.md)
 
 ## License
 
