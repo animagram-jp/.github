@@ -18,9 +18,6 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 *.md
 !README.md
 !CONTRIBUTING.md
-!SECURITY.md
-!SUPPORT.md
-!CODE_OF_CONDUCT.md
 ```
 
 ### Issue
