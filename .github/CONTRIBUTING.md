@@ -4,6 +4,25 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 
 ## Repository
 
+### Base files
+
+| Filepath | Description |
+|-|-|
+| `./READEME.md` | The first document. Description of the softwears, release schedule, quick start, provided api, etc. |
+| `./LICENSE` | Includes Apache-2.0 or GPL-3.0-only and auther's name.  |
+| `./CONTRIBUTING.md` | The common entrypoint for all developers. Requirement, function, system diagram, public port, internal port, data layout, etc. |
+| `./.gitignore` | As below. |
+
+```
+# ./.gitignore
+*.md
+!README.md
+!CONTRIBUTING.md
+!SECURITY.md
+!SUPPORT.md
+!CODE_OF_CONDUCT.md
+```
+
 ### Issue
 
 - Anyone can create issues at any time. Maintainers may clean these up at any time. 
@@ -15,56 +34,35 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | controverse | What we should talk about. | #5B2F91 |
 | improvement | A way to improve the repository. | #259d63 |
 
+---
+
 ## Writing
 
 This is for easy reading by human and computers.
 
 - Use 4 spaces (0x20) for indentation.
 
-### Directory and file
+### Naming
 
-| Filepath | Description |
-|-|-|
+- **Single word naming is always best.**
+- **In many cases, it is preferable to use singular names rather than plural ones.**
+- Abbreviations follow the same rule as others.
+- State on the 1st line `// This file includes untranslated text (ja).` when needed.
 
-- ./READEME.md: The first document. Here are a description of the softwears, release schedule, quick start, provided api, etc.
-- ./CONTRIBUTING.md: The common entrypoint for all developers.
-- docs/Architecture.md: structure of requirements, functions, diagram of processes, modules, script files, etc.
-- LICENSE: apache-2.0, author.
-- .gitignore: *.lock, target, etc.
-- src: script files.
-- examples: static data files, datasets for test, example, etc.
-
-#### Name format
-
-**Single word naming is always best.**
-
-- directory:  snake_case (Kebab-case is also good unless for script.)
-- file:
-    - Document: CamelCase
-    - script:   snake_case
-        - varaiable: snake_case (with kebab-case is also good in static format.)
-    - data_format: snake_case
-        - key:  snake_case (with kebab-case for 2 diffrent degrees of relation.)
-- md outline: Capitalized with space
-- sentence:   Capitalized with space and .
-
-Abbreviations follow the same rule as others.
-
-### Document
-
-This is for easy reading and comprehensive understanding of all within a repository by human.
-
-When written in Japanese for maintainability, state on the 1st line the following:
-
-```text
-// This file includes untranslated text (ja).
-```
+| Category | Field | Rule | Description |
+|-|-|-|-|
+| directory | dirname  | snake_case | Kebab-case is also good unless for script repos. |
+| document  | file     | CamelCase  |-|
+|           | outline  | Capitalized with space |-|
+|           | sentence | Capitalized with space and . |-|
+| script    | file     | snake_case |-|
+|           | variable | snake_case | And with kebab-case for 2 diffrent degrees of relation. |
+| data file | file     | snake_case |-|
+|           | key      | snake_case | Following the script variables. |
 
 ### Script
 
-Write scripts with only ASCII.
 The following example uses Rust. When using a different stack, adapt it accordingly.
-These are for comprehensive understanding of scripts.
 
 #### Dependencies
 
@@ -130,8 +128,6 @@ impl Display for ListError {
 ```
 
 #### Literal quote
-
-This is for easy of stack changing.
 
 - slicable string: "" e.g., "", "ab"
 - unslicable char: '' e.g., 'あ'
