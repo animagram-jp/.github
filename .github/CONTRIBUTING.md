@@ -13,15 +13,18 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 |-|-|-|
 | bug | Something isn't working. | #d73a4a |
 | controverse | What we should talk about. | #5B2F91 |
-| improvement | A way we can improve the repository. | #259d63 |
+| improvement | A way to improve the repository. | #259d63 |
 
 ## Writing
 
 This is for easy reading by human and computers.
 
-- Use 4 spaces(0x20) for indentation.
+- Use 4 spaces (0x20) for indentation.
 
 ### Directory and file
+
+| Filepath | Description |
+|-|-|
 
 - ./READEME.md: The first document. Here are a description of the softwears, release schedule, quick start, provided api, etc.
 - ./CONTRIBUTING.md: The common entrypoint for all developers.
