@@ -10,8 +10,8 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 
 | Filepath | Description |
 |-|-|
-| `./READEME.md` | The first document. Description of the softwears, release schedule, quick start, provided api, etc. |
-| `./LICENSE` | Includes Apache-2.0 or GPL-3.0-only and auther's name.  |
+| `./README.md` | The first document. Description of the softwear, release schedule, quick start, provided api, etc. |
+| `./LICENSE` | Includes Apache-2.0 or GPL-3.0-only and authors' names.  |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. Requirement, function, system diagram, public port, internal port, data layout, etc. |
 | `./.gitignore` | As below. |
 
@@ -56,7 +56,7 @@ This is for easy reading by human and computers.
 |           | outline  | Capitalized with space |-|
 |           | sentence | Capitalized with space and . |-|
 | script    | file     | snake_case |-|
-|           | variable | snake_case | And with kebab-case for 2 diffrent degrees of relation. |
+|           | variable | snake_case | And with kebab-case for 2 different degrees of relation. |
 | data file | file     | snake_case |-|
 |           | key      | snake_case | Following the script variables. |
 
@@ -70,7 +70,7 @@ The following example uses Rust. When using a different stack, adapt it accordin
 - Declare it not only in root (lib.rs), but each script file in its 1st block.
 - Prohibit individual inline references below the declaration block.
 - Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
-- Without projects heap limitations are never useful, include a commented-out `no_std` declaration in the root file in advance.
+- For projects heap limitations might be useful, include a commented-out `no_std` declaration in the root file in advance.
 
 ```rust
 // examples
@@ -131,7 +131,7 @@ impl Display for ListError {
 
 #### Comment
 
-- Write a outer line DocComment for each public item.
+- Write an outer line DocComment for each public item.
 - Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
 - Write a DocTest when needed for each private fun.
 - Inside functions, clearly state the intent with inline comments where necessary.
