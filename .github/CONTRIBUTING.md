@@ -48,6 +48,7 @@ This is for easy reading by human and computers.
 - **In many cases, it is preferable to use singular names rather than plural ones.**
 - Abbreviations follow the same rule as others.
 - State on the 1st line `// This file includes untranslated text (ja).` when needed.
+- Avoid using camelCase as much as possible, with using either snake_case or PascalCase.
 
 | Category | Field | Rule | Description |
 |-|-|-|-|
