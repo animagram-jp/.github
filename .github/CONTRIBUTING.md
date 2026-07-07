@@ -15,15 +15,16 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | controverse | What we should talk about. | #5B2F91 |
 | improvement | A way we can improve the repository. | #259d63 |
 
-### Writing
+## Writing
 
 This is for easy reading by human and computers.
 
-- Use tab(0x09) or 4 spaces(0x20) for indentation.
+- Use 4 spaces(0x20) for indentation.
 
-#### Directory and file
+### Directory and file
 
-- READEME.md: project name, problem & solution, quick start, commands, etc.
+- ./READEME.md: The first document. Here are a description of the softwears, release schedule, quick start, provided api, etc.
+- ./CONTRIBUTING.md: The common entrypoint for all developers.
 - docs/Architecture.md: structure of requirements, functions, diagram of processes, modules, script files, etc.
 - LICENSE: apache-2.0, author.
 - .gitignore: *.lock, target, etc.
