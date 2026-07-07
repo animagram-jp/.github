@@ -2,6 +2,8 @@
 
 Here are common rules to keep a repository comprehensible as a whole — so that maintainers can stay aware of every element within the repository at all times. When a rule seems ambiguous, favor the interpretation that best preserves this comprehensibility.
 
+---
+
 ## Repository
 
 ### Base files
@@ -62,14 +64,13 @@ This is for easy reading by human and computers.
 
 The following example uses Rust. When using a different stack, adapt it accordingly.
 
-#### Dependencies
+#### Dependency declaration
 
 - Dependencies refer not only to third-party modules but to all callings defined outside of itself.
 - Declare it not only in root (lib.rs), but each script file in its 1st block.
 - Prohibit individual inline references below the declaration block.
 - Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
-- Witout projects heap limitations are never useful, include a commented-out `no_std` declaration in the root file in advance.
-- The ideal approach is a single feature that works in both `std` or `no_std` environments.
+- Without projects heap limitations are never useful, include a commented-out `no_std` declaration in the root file in advance.
 
 ```rust
 // examples
@@ -98,8 +99,6 @@ use crate::{
 ```
 
 #### Error
-
-This is for comprehensive export of error within softwear for me, and comprehensive implement for users.
 
 - Do not use `std::error::Error` implementations as they are not compatible with no_std.
 - Define an item for each module (such as `ListError`), and wrap them in the public Error item (e.g., `VariableListError::List(ListError)`).
@@ -132,16 +131,12 @@ impl Display for ListError {
 
 #### Comment
 
-This is for minimum maintenance costs.
-
 - Write a outer line DocComment for each public item.
 - Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
 - Write a DocTest when needed for each private fun.
 - Inside functions, clearly state the intent with inline comments where necessary.
 
 #### Test
-
-This is for minimum maintenance costs.
 
 - Write unit tests that is not duplicating with DocTest.
 - Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
