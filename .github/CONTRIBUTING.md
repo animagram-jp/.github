@@ -1,4 +1,4 @@
-# Contribution
+# Contributing
 
 Here are common rules to keep a repository comprehensible as a whole — so that maintainers can stay aware of every element within the repository at all times. When a rule seems ambiguous, favor the interpretation that best preserves this comprehensibility.
 
