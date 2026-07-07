@@ -1,13 +1,12 @@
-# animagram-rule
+# Contribution
 
-Here are common rules for projects in animagram.
+Here are common rules to keep a repository comprehensible as a whole — so that maintainers can stay aware of every element within the repository at all times. When a rule seems ambiguous, favor the interpretation that best preserves this comprehensibility.
 
-## Contribution
+## Repository
 
-### Community
+### Issue
 
-#### Issue
-
+- Anyone can create issues at any time. Maintainers may clean these up at any time. 
 - tags
 
 | Label | Description | Color |
