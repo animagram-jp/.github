@@ -2,17 +2,13 @@
 
 - The word "anima" is name of concepts and existences.
 - The word "gram" is name of written expression (human language or commands to computers).
-- Now I, Andyou am solo-working here in public for ubiquitous helper of daily life. 
+- Now I, Andyou am developing a new web system that can be ubiquitous for daily life. 
 
 - theme color: #5B2F91
 
 ## Rule
 
 - [common for projects](https://github.com/animagram-jp/.github/blob/main/.github/CONTRIBUTING.md)
-
-## License
-
-![Apache-2.0](https://img.shields.io/badge/license-Apache%202.0-blue)
 
 ## Projects
 
@@ -23,7 +19,7 @@
 Gui application system for editing and reading structured data.
 Handles event loop by Wasm App with some static glue JavaScript.
 
-- materials: `web standard`, `Wasm`, `Rust`,`transaction log`, `OPFS`, `Service Worker`
+- materials: `web standard api`, `Wasm`, `Rust`,`transaction log`, `OPFS`, `Service Worker`
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
@@ -54,4 +50,4 @@ Works without interference to HTML.
 
 ### [handbook (draft)](../Handbook.md)
 
-- materials: `network engineering`, `computer engineering` ,`namespace of conecepts`
+Under development.
