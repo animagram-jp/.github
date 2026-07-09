@@ -21,14 +21,11 @@ Handles event loop by Wasm App with some static glue JavaScript.
 
 - materials: `web standard api`, `Wasm`, `Rust`,`transaction log`, `OPFS`, `Service Worker`
 
-### [context-engine](https://github.com/animagram-jp/context-engine)
+### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
 
-Declarative context management for request handlers.
-Eliminates the asymmetry between server and client scripts using a YAML DSL.
-
-- materials: `YAML`, `no_std Rust`
+Region operations on rectilinear grids with arbitrary unit systems.
 
 ### [flair](https://github.com/animagram-jp/flair)
 
@@ -39,13 +36,16 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
 
-### [rectgrid](https://github.com/animagram-jp/rectgrid)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
-
-Region operations on rectilinear grids with arbitrary unit systems.
-
 - materials: `no_std Rust`, `DOM`
+
+### [context-engine](https://github.com/animagram-jp/context-engine)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
+
+Declarative context management for request handlers.
+Eliminates the asymmetry between server and client scripts using a YAML DSL.
+
+- materials: `YAML`, `no_std Rust`
 
 ### [css](https://github.com/animagram-jp/css)
 
