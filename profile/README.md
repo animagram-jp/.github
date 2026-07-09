@@ -39,6 +39,14 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
 
+### [rectgrid](https://github.com/animagram-jp/rectgrid)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
+
+Region operations on rectilinear grids with arbitrary unit systems.
+
+- materials: `no_std Rust`
+
 ### [css](https://github.com/animagram-jp/css)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
