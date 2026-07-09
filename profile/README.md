@@ -45,7 +45,7 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 
 Region operations on rectilinear grids with arbitrary unit systems.
 
-- materials: `no_std Rust`, `DOM API`
+- materials: `no_std Rust`, `DOM`
 
 ### [css](https://github.com/animagram-jp/css)
 
