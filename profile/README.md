@@ -54,7 +54,7 @@ Eliminates the asymmetry between server and client scripts using a YAML DSL.
 Css universal design boilerplate.
 Works without interference to HTML.
 
-- materials: `DADS`, `CSS`, `HTML`, `Javascript`
+- materials: `DADS`, `CSS`, `HTML`
 
 ### [handbook (draft)](../Handbook.md)
 
