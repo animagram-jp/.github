@@ -27,6 +27,8 @@ Handles event loop by Wasm App with some static glue JavaScript.
 
 Region operations on rectilinear grids with arbitrary unit systems.
 
+- materials: `no_std Rust`, `DOM`
+
 ### [flair](https://github.com/animagram-jp/flair)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
@@ -35,8 +37,6 @@ Wasm-compilable implement of time series forecasting algorithm FLAIR.
 Runs entirely in the browser and provides self-estimated forecast confidence.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
-
-- materials: `no_std Rust`, `DOM`
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
