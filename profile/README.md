@@ -2,9 +2,9 @@
 
 - The word "anima" is name of concepts and existences.
 - The word "gram" is name of written expression (human language or commands to computers).
-- Now I, Andyou am developing a new web system that can be ubiquitous for daily life. 
+- Now I, Andyou am developing a new web system that can be ubiquitous for daily life.
 
-- theme color: #5B2F91
+- theme color: ![#5B2F91](https://img.shields.io/badge/%235B2F91-5B2F91?logo=github&logoColor=white)
 
 ## Rule
 
@@ -55,7 +55,3 @@ Css universal design boilerplate.
 Works without interference to HTML.
 
 - materials: `DADS`, `CSS`, `HTML`
-
-### [handbook (draft)](../Handbook.md)
-
-Under development.
