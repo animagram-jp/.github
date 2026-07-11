@@ -19,7 +19,7 @@
 Gui application system for editing and reading structured data.
 Handles event loop by Wasm App with some static glue JavaScript.
 
-- materials: `web standard api`, `Wasm`, `Rust`,`transaction log`, `OPFS`, `Service Worker`
+- materials: `Web APIs`, `Wasm`, `Rust`
 
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
