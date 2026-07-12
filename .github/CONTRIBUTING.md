@@ -16,7 +16,6 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | `./.gitignore` | As below. |
 
 ```
-# ./.gitignore
 *.md
 !README.md
 !CONTRIBUTING.md
@@ -24,7 +23,7 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 
 ### Issue
 
-- Anyone can create issues at any time. Maintainers may clean these up at any time. 
+- Anyone can create issues at any time. Maintainers may clean these up at any time.
 - tags
 
 | Label | Description | Color |
@@ -66,11 +65,11 @@ The following example uses Rust. When using a different stack, adapt it accordin
 
 #### Dependency declaration
 
-- Dependencies refer not only to third-party modules but to all callings defined outside of itself.
-- Declare it not only in root (lib.rs), but each script file in its 1st block.
-- Prohibit individual inline references below the declaration block.
+- To ensure that all dependencies, including those not required for normal operation, can be identified, please declare all dependency references at the beginning of each file.
+- Additionally, to ensure consistency in the order and granularity of these declarations, verify this thoroughly for every file you edit upon completion of each task.
 - Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
-- For projects heap limitations might be useful, include a commented-out `no_std` declaration in the root file in advance.
+- To confirm  temporarily to ensure explicit `use` declarations. Please comment out after finishing the modifications.
+- You can ensure these practices are followed throughout the entire repository by temporarily adding #![no_std] or #![no_implicit_prelude], such as right before creating each tag.
 
 ```rust
 // examples
