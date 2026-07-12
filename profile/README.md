@@ -17,7 +17,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 
 Gui application system for editing and reading structured data.
-Handles event loop by Wasm App with some static glue JavaScript.
+Handles event loop by Wasm App.
 
 - materials: `Web APIs`, `Wasm`, `Rust`
 
