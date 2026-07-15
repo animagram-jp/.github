@@ -30,7 +30,7 @@ Region operations on rectilinear grids with arbitrary unit systems.
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
 
 Wasm-compilable implement of time series forecasting algorithm FLAIR.
-Runs entirely in the browser and provides self-estimated forecast confidence.
+Provides self-estimated forecast confidence with an 800 KB binary.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
 
