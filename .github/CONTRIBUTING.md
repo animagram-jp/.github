@@ -32,6 +32,11 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | controverse | What we should talk about. | #5B2F91 |
 | improvement | A way to improve the repository. | #259d63 |
 
+### Git
+
+- Git branches treat versioning tags without a v-prefix as release targets. In principle, tags should be created on the "main" branch.
+- Depending on the scale of development, additional branches such as "develop" or "feature/{ISSUE_NUMBER}" ([reference](https://nvie.com/posts/a-successful-git-branching-model/)) may be used. Clean up unnecessary branches as you go.
+
 ---
 
 ## Writing
