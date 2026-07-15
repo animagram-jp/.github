@@ -13,8 +13,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 
-Gui application system for editing and reading structured data.
-Handles event loop by Wasm App.
+Gui application system for editing and reading structured data. Handles event loop by Wasm App.
 
 - materials: `Web APIs`, `Wasm`, `Rust`
 
@@ -40,7 +39,7 @@ Runs entirely in the browser and provides self-estimated forecast confidence.
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
 
 Declarative context management for request handlers.
-Eliminates the asymmetry between server and client scripts using a YAML DSL.
+Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 - materials: `YAML`, `no_std Rust`
 
