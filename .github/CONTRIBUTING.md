@@ -131,7 +131,7 @@ impl Display for ListError {
 #### Literal quote
 
 - slicable string: "" e.g., "", "ab"
-- unslicable char: '' e.g., 'あ'
+- unslicable char: '' e.g., 'a'
 
 #### Comment
 
@@ -149,6 +149,12 @@ impl Display for ListError {
 
 #### Html
 
-- formatting rule:
+- Tag id rules:
+    - Automatically determined based on the parent tag after the body and its sequence number.
+    - "_" = Parent-child segment separator. (e.g., main_div_section-1)
+    - "-N" = Sequence number within the same tag. (e.g., span-3, th-2)
+    - No sequence number = Only one in that hierarchy. (e.g., thead_tr, legend_h5)
+- Formatting rules:
+    - Follow this order: `<tag, id, standard attribute, aria-label, class, cutom attribute>`.
     - Do not insert a line break before a closing tag.
     - Insert a line break before the start of every tag.
