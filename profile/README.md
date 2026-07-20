@@ -4,7 +4,7 @@
 - The word "gram" is name of written expression (human language or commands to computers).
 - Now I, Andyou am developing a new web system that can be ubiquitous for daily life.
 
-- theme color: ![#5B2F91](https://img.shields.io/badge/%235B2F91-5B2F91)
+- theme color: ![#5B2F91](https://img.shields.io/badge/%235B2F91-5B2F91?style=flat)
 - common rules for development: [ORG_CONTRIBUTING.md](https://github.com/animagram-jp/.github/blob/main/.github/CONTRIBUTING.md)
 
 ## Projects
