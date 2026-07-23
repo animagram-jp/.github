@@ -50,4 +50,4 @@ Eliminates the asymmetry between nodes in a system using a YAML DSL.
 Css universal design boilerplate.
 Works without interference to HTML.
 
-- materials: `DADS`, `CSS`, `HTML`
+- materials: `CSS`, `HTML`
