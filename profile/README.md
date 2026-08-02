@@ -47,7 +47,7 @@ Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
 
-Css universal design boilerplate.
+Universal design css library.
 Works without interference to HTML.
 
 - materials: `CSS`, `HTML`
