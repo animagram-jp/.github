@@ -29,7 +29,7 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 
 | Label | Description | Color |
 |-|-|-|
-| bug | Something isn't working. | #d73a4a |
+| bug | Something isn't working. | #FF2800 |
 | controverse | What we should talk about. | #5B2F91 |
 | improvement | A way to improve the repository. | #35A16B |
 
