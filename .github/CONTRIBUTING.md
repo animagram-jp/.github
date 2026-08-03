@@ -1,6 +1,9 @@
-# Contributing
+# Development Rules
 
-Here are common rules to keep a repository comprehensible as a whole — so that maintainers can stay aware of every element within the repository at all times. When a rule seems ambiguous, favor the interpretation that best preserves this comprehensibility.
+These are the common rules across the entire project development.
+This content is intended for everyone, whether LLM or human.
+Top priority is placed on maintaining a state where the person in charge can comprehensively manage each codebase.
+For scenes where the rules below do not apply, please make judgments that serve this goal.
 
 ---
 
@@ -8,18 +11,27 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 
 ### Base files
 
-| Filepath | Description |
+| Filepath | Content |
 |-|-|
-| `./README.md` | The first document. Description of the softwear, release schedule, quick start, provided api, etc. |
-| `./LICENSE` | Includes Apache-2.0 or GPL-3.0-only and authors' names.  |
-| `./CONTRIBUTING.md` | The common entrypoint for all developers. Requirement, function, system diagram, public port, internal port, data layout, etc. |
-| `./.gitignore` | As below. Opt in files that need to be indexed. |
+| `./README.md` | The first document to read. Describes the software, release schedule, quick start, provided API, etc. |
+| `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only, and the authors' names. |
+| `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
+| `./.gitignore` | As below. Explicitly opt in only the files that need to be indexed. |
 
 ```
 /*.md
 !README.md
 !CONTRIBUTING.md
 /docs/*
+```
+
+#### Beginning of CONTRIBUTING.md
+
+Read [ORG_CONTRIBUTING.md](./ORG_CONTRIBUTING.md).
+If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working environment, download it by executing the following.
+
+```bash
+curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/repos/animagram-jp/.github/contents/.github/CONTRIBUTING.md?ref=main" -o "ORG_CONTRIBUTING.md"
 ```
 
 ### Issue
