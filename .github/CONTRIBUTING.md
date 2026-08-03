@@ -143,11 +143,16 @@ use crate::{
 
 ### Error
 
-- Do not use `std::error::Error` implementations as they are not compatible with no_std.
-- Define an item for each module (such as `ListError`), and wrap them in the public Error item (e.g., `VariableListError::List(ListError)`).
+An error is a variable representation of the point in a script where the code gives up on continuing or completing the intended operation, and instead transitions to safety-oriented handling. Safety-oriented handling means:
+1. Guaranteeing, via the variable itself, an appropriate response to the user (e.g. displaying an error message).
+2. Emitting a log so developers can retroactively retrieve information about the error's occurrence at runtime.
+
+- Error must reflect detail known to the thrower. Generic naming is prohibited.
+- Define an item for each module, and wrap them in the public Error item:
 
 ```rust
 // examples
+use core::fmt::{self, Display, Formatter};
 
 #[derive(Debug)]
 pub enum ListError {
@@ -161,7 +166,7 @@ pub enum VariableListError {
 }
 
 impl Display for ListError {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         write!(f, "{:?}", self)
     }
 }
