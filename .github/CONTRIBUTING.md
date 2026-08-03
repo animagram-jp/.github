@@ -60,13 +60,18 @@ This is for easy reading by human and computers.
 The following example uses Rust. When using a different stack, adapt it accordingly.
 
 - Use 4 spaces (0x20) for indentation.
+- State on the 1st line `// This file includes untranslated text (ja).` when needed.
 
 ### Naming
 
+Computers can fail to handle uppercase, full-width characters, and names starting with a digit.
+
 - **Single word naming is always best.**
 - **In many cases, it is preferable to use singular names rather than plural ones.**
+- Using abbreviations of common nouns for the purpose of reducing character count is prohibited.
 - Abbreviations follow the same rule as others.
-- State on the 1st line `// This file includes untranslated text (ja).` when needed.
+- When kebab-case is allowed, combine it with snake_case to clarify the relation between compound words:
+    e.g., file-system_architecture
 - Follow the table below as much as possible, rather than the conventions of some stacks.
 
 | Category | Field | Rule | Description |
