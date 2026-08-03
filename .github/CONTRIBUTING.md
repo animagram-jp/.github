@@ -7,7 +7,7 @@ For scenes where the rules below do not apply, please make judgments that serve 
 
 ---
 
-## Repository
+## Operations
 
 ### Base files
 
