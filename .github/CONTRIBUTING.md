@@ -25,7 +25,7 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 ### Issue
 
 - Anyone can create issues at any time. Maintainers may clean these up at any time.
-- tags
+- Attatch tags as below:
 
 | Label | Description | Color |
 |-|-|-|
