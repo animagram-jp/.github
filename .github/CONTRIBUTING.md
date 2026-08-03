@@ -18,7 +18,7 @@ For scenes where the rules below do not apply, please make judgments that serve 
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
 | `./.gitignore` | As below. Explicitly opt in only the files that need to be indexed. |
 
-```
+```gitignore
 # ./.gitignore
 /*.md
 !README.md
