@@ -85,6 +85,19 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 | data file | file     | snake_case |-|
 |           | key      | snake_case | Following the script variables. |
 
+### Comment
+
+- Write an outer line DocComment for each public item.
+- Write inline comments only where necessary, for non-obvious reasons (why / why not).
+- Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
+
+### Test
+
+- Write unit tests that is not duplicating with DocTest.
+- Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
+- Names of test functions should follow the format `{target}_{condition}` (omit test_).
+- When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
+
 ### Literal quote
 
 Except for shell scripts, always follow the below. 
@@ -151,20 +164,6 @@ impl Display for ListError {
     }
 }
 ```
-
-### Comment
-
-- Write an outer line DocComment for each public item.
-- Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
-- Write a DocTest when needed for each private fun.
-- Inside functions, clearly state the intent with inline comments where necessary.
-
-### Test
-
-- Write unit tests that is not duplicating with DocTest.
-- Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
-- Names of test functions should follow the format `{target}_{condition}` (omit test_).
-- When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
 
 ### Html
 
