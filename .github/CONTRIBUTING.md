@@ -72,12 +72,12 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 - Using abbreviations of common nouns for the purpose of reducing character count is prohibited.
 - Abbreviations follow the same rule as others.
 - When kebab-case is allowed, combine it with snake_case to clarify the relation between compound words:
-    e.g., file-system_architecture
+    e.g., `file-system_architecture`
 - Follow the table below as much as possible, rather than the conventions of some stacks.
 
 | Category | Field | Rule | Description |
 |-|-|-|-|
-| directory | dirname  | snake_case | Kebab-case is also good unless for scripts. |
+| directory | dirname  | snake_case |  Kebab-case is also allowed unless for scripts. |
 | document  | file     | CamelCase  |-|
 |           | outline  | Capitalized with space |-|
 |           | sentence | Capitalized with space and . |-|
