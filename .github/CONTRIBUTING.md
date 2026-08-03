@@ -1,4 +1,4 @@
-# Development Rules
+# Common Rules
 
 These are the common rules across the entire project development.
 This content is intended for everyone, whether LLM or human.
