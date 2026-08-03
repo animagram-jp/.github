@@ -77,14 +77,16 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 
 | Category | Field | Rule | Description |
 |-|-|-|-|
-| directory | dirname  | snake_case | Kebab-case is also good unless for script repos. |
+| directory | dirname  | snake_case | Kebab-case is also good unless for scripts. |
 | document  | file     | CamelCase  |-|
 |           | outline  | Capitalized with space |-|
 |           | sentence | Capitalized with space and . |-|
 | script    | file     | snake_case |-|
-|           | variable | snake_case | And with kebab-case for 2 different degrees of relation. |
+|           | function | snake_case |-|
+|           | constant | UPPER_SNAKE |-|
+|           | variable | snake_case |-|
 | data file | file     | snake_case |-|
-|           | key      | snake_case | Following the script variables. |
+|           | key      | snake_case |-|
 
 ### Comment
 
