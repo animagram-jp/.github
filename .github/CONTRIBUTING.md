@@ -31,7 +31,7 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 |-|-|-|
 | bug | Something isn't working. | #d73a4a |
 | controverse | What we should talk about. | #5B2F91 |
-| improvement | A way to improve the repository. | #259d63 |
+| improvement | A way to improve the repository. | #35A16B |
 
 ### Git
 
