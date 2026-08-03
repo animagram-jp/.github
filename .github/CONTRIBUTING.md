@@ -1,7 +1,6 @@
 # Common Rules
 
-These are the common rules across the entire project development.
-This content is intended for everyone, whether LLM or human.
+These are common rules for development. This content is intended for everyone, whether human or not.
 Top priority is placed on maintaining a state where the person in charge can comprehensively manage each codebase.
 For scenes where the rules below do not apply, please make judgments that serve this goal.
 
