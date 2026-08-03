@@ -1,7 +1,7 @@
 # Common Rules
 
 These are common rules for development. This content is intended for everyone, whether human or not.
-Top priority is placed on maintaining a state where the person in charge can comprehensively manage each codebase.
+Top priority is placed on maintaining a state where the person in charge can comprehensively stay aware of every element within each codebase.
 For scenes where the rules below do not apply, please make judgments that serve this goal.
 
 ---
@@ -67,7 +67,7 @@ The following example uses Rust. When using a different stack, adapt it accordin
 Computers can fail to handle uppercase, full-width characters, and names starting with a digit.
 
 - **Single word naming is always best.**
-- **In many cases, it is preferable to use singular names rather than plural ones.**
+- **Use singular names rather than plural ones basically**
 - Using abbreviations of common nouns for the purpose of reducing character count is prohibited.
 - Abbreviations follow the same rule as others.
 - When kebab-case is allowed, combine it with snake_case to clarify the relation between compound words:
