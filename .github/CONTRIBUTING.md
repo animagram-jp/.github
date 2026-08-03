@@ -13,7 +13,7 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | `./README.md` | The first document. Description of the softwear, release schedule, quick start, provided api, etc. |
 | `./LICENSE` | Includes Apache-2.0 or GPL-3.0-only and authors' names.  |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. Requirement, function, system diagram, public port, internal port, data layout, etc. |
-| `./.gitignore` | As below. |
+| `./.gitignore` | As below. Opt in files that need to be indexed. |
 
 ```
 /*.md
