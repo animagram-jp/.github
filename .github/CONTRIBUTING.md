@@ -67,7 +67,7 @@ The following example uses Rust. When using a different stack, adapt it accordin
 Computers can fail to handle uppercase, full-width characters, and names starting with a digit.
 
 - **Single word naming is always best.**
-- **Use singular names rather than plural ones basically**
+- **Use singular names** rather than plural ones in most cases.
 - Using abbreviations of common nouns for the purpose of reducing character count is prohibited.
 - Abbreviations follow the same rule as others.
 - When kebab-case is allowed, combine it with snake_case to clarify the relation between compound words:
@@ -84,8 +84,8 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 |           | function | snake_case |-|
 |           | constant | UPPER_SNAKE |-|
 |           | variable | snake_case |-|
-| data file | file     | snake_case |-|
-|           | key      | snake_case |-|
+| data file | file     | snake_case | Kebab-case is allowed. |
+|           | key      | snake_case | As above. |
 
 ### Comment
 
