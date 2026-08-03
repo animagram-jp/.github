@@ -38,12 +38,12 @@ curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/
 ### Issue
 
 - Anyone can create issues at any time. Maintainers may clean these up at any time.
-- Attatch tags as below:
+- Attach tags as below:
 
 | Label | Description | Color |
 |-|-|-|
 | bug | Something isn't working. | #FF2800 |
-| controverse | What we should talk about. | #5B2F91 |
+| controversy | What we should talk about. | #5B2F91 |
 | improvement | A way to improve the repository. | #35A16B |
 
 ### Git
@@ -91,7 +91,7 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 
 - Write an outer line DocComment for each public item.
 - Write inline comments only where necessary, for non-obvious reasons (why / why not).
-- Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
+- Write a DocTest for each public function. Skip meaningless tests (e.g., Item:new) and comments.
 
 ### Test
 
@@ -102,29 +102,30 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 
 ### Literal quote
 
-Except for shell scripts, always follow the below. 
+Except for shell scripts, always follow the below.
 When nesting occurs, keep the outer quote double and use single quotes for the inner one.
-- slicable string: "" e.g., "", "ab"
-- unslicable char: '' e.g., 'a'
+- sliceable string: "" e.g., "", "ab"
+- unsliceable char: '' e.g., 'a'
 
 ### Dependency declaration
 
 - To ensure that all dependencies, including those not required for normal operation, can be identified, please declare all dependency references at the beginning of each file.
 - Additionally, to ensure consistency in the order and granularity of these declarations, verify this thoroughly for every file you edit upon completion of each task.
 - Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
-- To confirm  temporarily to ensure explicit `use` declarations. Please comment out after finishing the modifications.
-- You can ensure these practices are followed throughout the entire repository by temporarily adding #![no_std] or #![no_implicit_prelude], such as right before creating each tag.
 
 ```rust
 // examples
 
-// #![no_std]
+#![no_std]
 extern crate core;
 extern crate alloc;
+
+#[cfg(test)]
 extern crate std;
+
 use core::{
     primitive::{u8, u64, usize, i64, str},
-    fmt::{Display, Result, Formatter},
+    fmt::{self, Display, Formatter},
 };
 use alloc::{
     collections::{BTreeMap, BTreeSet},
@@ -180,6 +181,6 @@ impl Display for ListError {
     - "-N" = Sequence number within the same tag. (e.g., span-3, th-2)
     - No sequence number = Only one in that hierarchy. (e.g., thead_tr, legend_h5)
 - Formatting rules:
-    - Follow this order: `<tag, id, standard attribute, aria-label, class, cutom attribute>`.
+    - Follow this order: `<tag, id, standard attribute, aria-label, class, custom attribute>`.
     - Do not insert a line break before a closing tag.
     - Insert a line break before the start of every tag.

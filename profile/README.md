@@ -23,7 +23,7 @@ Gui application system for editing and reading structured data. Handles event lo
 
 Region operations on rectilinear grids with arbitrary unit systems.
 
-- materials: `no_std Rust`, `DOM`
+- materials: `no_std Rust`
 
 ### [flair](https://github.com/animagram-jp/flair)
 
