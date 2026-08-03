@@ -19,6 +19,7 @@ For scenes where the rules below do not apply, please make judgments that serve 
 | `./.gitignore` | As below. Explicitly opt in only the files that need to be indexed. |
 
 ```
+# ./.gitignore
 /*.md
 !README.md
 !CONTRIBUTING.md
