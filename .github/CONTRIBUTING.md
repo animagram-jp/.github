@@ -16,9 +16,10 @@ Here are common rules to keep a repository comprehensible as a whole — so that
 | `./.gitignore` | As below. |
 
 ```
-*.md
+/*.md
 !README.md
 !CONTRIBUTING.md
+docs/*
 ```
 
 ### Issue
