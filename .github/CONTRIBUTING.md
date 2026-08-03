@@ -48,14 +48,16 @@ curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/
 
 ### Git
 
-- Git branches treat versioning tags without a v-prefix as release targets. In principle, tags should be created on the "main" branch.
-- Depending on the scale of development, additional branches such as "develop" or "feature/{ISSUE_NUMBER}" ([reference](https://nvie.com/posts/a-successful-git-branching-model/)) may be used. Clean up unnecessary branches as you go.
+- Deploy targets must always be versioning tags without a v-prefix. In principle, they should be created on the "main" (or "staging") branch.
+- Depending on the scale of the repository, additional branches such as "develop" or "feature/{ISSUE_NUMBER}" may be used ([reference: Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)). Delete unnecessary branches as you go.
+- Deploy targets for "staging" use version tags in the `0.x.x` series.
 
 ---
 
 ## Writing
 
 This is for easy reading by human and computers.
+The following example uses Rust. When using a different stack, adapt it accordingly.
 
 - Use 4 spaces (0x20) for indentation.
 
@@ -78,11 +80,14 @@ This is for easy reading by human and computers.
 | data file | file     | snake_case |-|
 |           | key      | snake_case | Following the script variables. |
 
-### Script
+### Literal quote
 
-The following example uses Rust. When using a different stack, adapt it accordingly.
+Except for shell scripts, always follow the below. 
+When nesting occurs, keep the outer quote double and use single quotes for the inner one.
+- slicable string: "" e.g., "", "ab"
+- unslicable char: '' e.g., 'a'
 
-#### Dependency declaration
+### Dependency declaration
 
 - To ensure that all dependencies, including those not required for normal operation, can be identified, please declare all dependency references at the beginning of each file.
 - Additionally, to ensure consistency in the order and granularity of these declarations, verify this thoroughly for every file you edit upon completion of each task.
@@ -116,7 +121,7 @@ use crate::{
 }
 ```
 
-#### Error
+### Error
 
 - Do not use `std::error::Error` implementations as they are not compatible with no_std.
 - Define an item for each module (such as `ListError`), and wrap them in the public Error item (e.g., `VariableListError::List(ListError)`).
@@ -142,26 +147,21 @@ impl Display for ListError {
 }
 ```
 
-#### Literal quote
-
-- slicable string: "" e.g., "", "ab"
-- unslicable char: '' e.g., 'a'
-
-#### Comment
+### Comment
 
 - Write an outer line DocComment for each public item.
 - Write a DocTest for each public fun. Skip meaningless tests(e.g., Item:new) and comments.
 - Write a DocTest when needed for each private fun.
 - Inside functions, clearly state the intent with inline comments where necessary.
 
-#### Test
+### Test
 
 - Write unit tests that is not duplicating with DocTest.
 - Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
 - Names of test functions should follow the format `{target}_{condition}` (omit test_).
 - When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
 
-#### Html
+### Html
 
 - Tag id rules:
     - Automatically determined based on the parent tag after the body and its sequence number.
