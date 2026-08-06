@@ -1,8 +1,8 @@
 # Common Rules
 
-These are common rules for development. This content is intended for everyone, whether human or not.
-Top priority is placed on maintaining a state where the person in charge can comprehensively stay aware of every element within each codebase.
-For scenes where the rules below do not apply, please make judgments that serve this goal.
+These are common rules for development. This content is intended for everyone, whether human or not.  
+Top priority is placed on maintaining a state where the person in charge can comprehensively stay aware of every element within each codebase.  
+For scenes where the rules below do not apply, please make judgments that serve this goal.  
 
 ---
 
@@ -28,8 +28,8 @@ For scenes where the rules below do not apply, please make judgments that serve 
 
 #### Beginning of CONTRIBUTING.md
 
-Read [ORG_CONTRIBUTING.md](./ORG_CONTRIBUTING.md).
-If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working environment, download it by executing the following.
+Read [ORG_CONTRIBUTING.md](./ORG_CONTRIBUTING.md).  
+If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working environment, download it by executing the following.  
 
 ```bash
 curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/repos/animagram-jp/.github/contents/.github/CONTRIBUTING.md?ref=main" -o "ORG_CONTRIBUTING.md"
