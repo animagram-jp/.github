@@ -100,13 +100,6 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 - Names of test functions should follow the format `{target}_{condition}` (omit test_).
 - When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
 
-### Literal quote
-
-Except for shell scripts, always follow the below.
-When nesting occurs, keep the outer quote double and use single quotes for the inner one.
-- sliceable string: "" e.g., "", "ab"
-- unsliceable char: '' e.g., 'a'
-
 ### Dependency declaration
 
 - To ensure that all dependencies, including those not required for normal operation, can be identified, please declare all dependency references at the beginning of each file.
@@ -172,6 +165,14 @@ impl Display for ListError {
     }
 }
 ```
+
+### Quotation mark
+
+Where the choice between single and double quotes is not constrained, follow the below.
+
+- Always use double quotes where no nesting occurs.
+- Where nesting occurs, always fix the outer quote to double and use single quotes for the inner one.
+    e.g., `<div :class="'is-active'">`
 
 ### Html
 
