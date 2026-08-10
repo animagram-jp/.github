@@ -120,15 +120,6 @@ user www-data;
 worker_processes 1; # for local developmentment
 ```
 
-## National holidays (JP)
-
-```bash
-# "昭和30年（1955年）から令和9年（2027年）国民の祝日（csv形式：22KB）"
-curl -o syukujitsu.csv "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv"
-iconv -f SHIFT-JIS -t UTF-8 syukujitsu.csv | awk -F, '$1 ~ /^2026/ {print $1 "\t" $2}' > national_holidays_2026.tsv
-rm syukujitsu.csv
-```
-
 ## Rust
 
 - [rustup: managemer](https://rust-lang.org/tools/install/)
@@ -208,4 +199,15 @@ updates:
     directory: "/" # ./
     schedule:
       interval: "weekly"
+```
+
+---
+
+## National holidays (JP)
+
+```bash
+# "昭和30年（1955年）から令和9年（2027年）国民の祝日（csv形式：22KB）"
+curl -o syukujitsu.csv "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv"
+iconv -f SHIFT-JIS -t UTF-8 syukujitsu.csv | awk -F, '$1 ~ /^2026/ {print $1 "\t" $2}' > national_holidays_2026.tsv
+rm syukujitsu.csv
 ```
