@@ -120,7 +120,7 @@ user www-data;
 worker_processes 1; # for local developmentment
 ```
 
-## national holidays (JP)
+## National holidays (JP)
 
 ```bash
 # "昭和30年（1955年）から令和9年（2027年）国民の祝日（csv形式：22KB）"
