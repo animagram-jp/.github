@@ -8,8 +8,6 @@
 - Common rules for development: [ORG_CONTRIBUTING.md](../.github/CONTRIBUTING.md)
 - Cheet sheet for development: [CheetSheet.md](../CheetSheet.md)
 
-<svg width="60" height="60"><circle cx="30" cy="30" r="28" fill="#5B2F91"></svg>
-
 ## Projects
 
 ### [app](https://github.com/animagram-jp/app)
