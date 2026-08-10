@@ -8,7 +8,7 @@
 - Common rules for development: [ORG_CONTRIBUTING.md](../.github/CONTRIBUTING.md)
 - Cheet sheet for development: [CheetSheet.md](../CheetSheet.md)
 
-<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='30' cy='30' r='28' fill='%235B2F91'/%3E%3C/svg%3E" width="60" height="60" alt="#5B2F91">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='28' fill='%235B2F91'/%3E%3C/svg%3E" width="60" height="60" alt="#5B2F91">
 
 ## Projects
 
