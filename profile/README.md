@@ -6,7 +6,7 @@
 
 - Theme color: #5B2F91 (RGB: 36 18 57)
 - Common rules for development: [ORG_CONTRIBUTING.md](../.github/CONTRIBUTING.md)
-- Cheet sheet for CLI: [CheetSheet.md](../CheetSheet.md)
+- Cheet sheet for development: [CheetSheet.md](../CheetSheet.md)
 
 ## Projects
 
