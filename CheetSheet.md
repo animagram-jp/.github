@@ -1,4 +1,4 @@
-# Cheetsheet
+# Cheet sheet
 
 - update_at: 2026-07
 
