@@ -125,7 +125,6 @@ use alloc::{
     string::{String, ToString},
     vec::Vec,
 };
-
 use crate::{
     list::{List, VariableList},
     debug_log,
