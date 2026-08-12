@@ -41,7 +41,7 @@ systemd=true
 # --- apt ---
 
 # update distribution
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt dist-upgrade -y
 sudo do-release-upgrade
 
