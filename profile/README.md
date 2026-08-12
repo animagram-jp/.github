@@ -14,7 +14,8 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 
-Gui application system for editing and reading structured data. Handles event loop by Wasm App.
+Gui application system for editing and reading structured data.  
+Handles event loop by Wasm App.
 
 - materials: `Web APIs`, `Wasm`, `Rust`
 
@@ -30,7 +31,7 @@ Region operations on rectilinear grids with arbitrary unit systems.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
 
-Wasm-compilable implement of time series forecasting algorithm FLAIR.
+Wasm-compilable implement of time series forecasting algorithm FLAIR.  
 Provides self-estimated forecast confidence with an 800 KB binary.
 
 - materials: `FLAIR`, `SVD`, `no_std Rust`
@@ -39,7 +40,7 @@ Provides self-estimated forecast confidence with an 800 KB binary.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
 
-Declarative context management for request handlers.
+Declarative context management for request handlers.  
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 - materials: `YAML`, `no_std Rust`
@@ -48,7 +49,7 @@ Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
 
-Universal design css library.
+Universal design css library.  
 Works without interference to HTML.
 
 - materials: `CSS`, `HTML`
