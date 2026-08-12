@@ -126,13 +126,13 @@ use alloc::{
     vec::Vec,
 };
 
-#[cfg(test)]
-use std::fs;
-
 use crate::{
     list::{List, VariableList},
     debug_log,
-}
+};
+
+#[cfg(test)]
+use std::fs;
 ```
 
 ### Error
