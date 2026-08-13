@@ -78,7 +78,7 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 |-|-|-|-|
 | directory | dirname  | snake_case |  Kebab-case is also allowed unless for scripts. |
 | document  | file     | CamelCase  |-|
-|           | outline  | Capitalized with space |-|
+|           | outline  | Capitalized with space | This includes table header cells. |
 |           | sentence | Capitalized with space and . |-|
 | script    | file     | snake_case |-|
 |           | function | snake_case |-|
