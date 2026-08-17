@@ -16,6 +16,7 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 | `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only, and the authors' names. |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
 | `./src/` | Root directory for scripts maintainers write. For projects with multiple stacks, use `{stack_name}/src/` instead. |
+| `./distribution/` | Root directory for what this repo distributes to users. Preferred over `./reference/` and `./artifact/` when content fits either. | |
 | `./reference/` | Root directory for reference material. |
 | `./artifact/` | Root directory for artifacts: files that can be regenerated. |
 | `./.gitignore` | As shown below. Explicitly opt in only the files that need to be tracked. |
@@ -25,6 +26,8 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 /*.md
 !README.md
 !CONTRIBUTING.md
+
+/distribution/*
 
 /reference/*
 
