@@ -1,8 +1,8 @@
 # Common Rules
 
-These are common rules for development. This content is intended for everyone, whether human or not.  
-Top priority is placed on maintaining a state where the person in charge can comprehensively stay aware of every element within each codebase.  
-For scenes where the rules below do not apply, please make judgments that serve this goal.  
+These are the common rules for development. This content applies to everyone, whether human or not.  
+The top priority is keeping the codebase in a state where the person in charge can stay comprehensively aware of every element in it.  
+For cases where the rules below don't apply, use judgment that serves this goal.  
 
 ---
 
@@ -10,12 +10,15 @@ For scenes where the rules below do not apply, please make judgments that serve 
 
 ### Base files
 
-| Filepath | Content |
+| Path | Content |
 |-|-|
 | `./README.md` | The first document to read. Describes the software, release schedule, quick start, provided API, etc. |
 | `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only, and the authors' names. |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
-| `./.gitignore` | As below. Explicitly opt in only the files that need to be indexed. |
+| `./src/` | Root directory for scripts maintainers write. For projects with multiple stacks, use `{stack_name}/src/` instead. |
+| `./reference/` | Root directory for reference material. |
+| `./artifact/` | Root directory for artifacts: files that can be regenerated. |
+| `./.gitignore` | As shown below. Explicitly opt in only the files that need to be tracked. |
 
 ```gitignore
 # ./.gitignore
@@ -23,7 +26,11 @@ For scenes where the rules below do not apply, please make judgments that serve 
 !README.md
 !CONTRIBUTING.md
 
-/docs/*
+/reference/*
+!/reference/
+
+/artifact/*
+!/artifact/
 ```
 
 #### Beginning of CONTRIBUTING.md
