@@ -34,16 +34,14 @@ systemd=true
 
 | Image | Update cycle |
 |-|-|
-| Debian stable slim | 2 years |
 | Ubuntu non-LTS | 6 months |
+| Debian stable slim | 2 years |
 
 ```bash
 # --- apt ---
 
-# update distribution
+# upgrade distribution dependencies
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-sudo apt dist-upgrade -y
-sudo do-release-upgrade
 
 mkdir -p w # make a user's working root
 # exclude recommend dependencies when apt install
