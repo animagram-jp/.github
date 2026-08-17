@@ -8,7 +8,7 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 
 ## Operations
 
-### Base files
+### Base paths
 
 | Path | Content |
 |-|-|
@@ -27,10 +27,8 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 !CONTRIBUTING.md
 
 /reference/*
-!/reference/
 
 /artifact/*
-!/artifact/
 ```
 
 #### Beginning of CONTRIBUTING.md
