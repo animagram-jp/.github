@@ -1,6 +1,6 @@
 # Cheet sheet
 
-- update_at: 2026-07
+- update_at: 2026-08
 
 ## Powershell
 
@@ -48,6 +48,7 @@ mkdir -p w # make a user's working root
 echo 'APT::Install-Recommends "false";' | sudo tee /etc/apt/apt.conf.d/99no-recommends
 
 # get host version
+
 uname -a # linux kernel version
 cat /etc/os-release # apt distribution version
 cat /etc/apt/sources.list
@@ -56,22 +57,26 @@ sudo apt list --manual-installed
 sudo rm -f /etc/apt/sources.list.d/{repogitory}.list 
 
 # purge when unuse cloud-init and vim
+
 sudo apt purge cloud-init
 sudo rm -rf /etc/cloud /var/lib/cloud
 sudo apt install nano && sudo apt purge vim-tiny vim
 sudo apt autoremove
 
 # --- ssh ---
+
 sudo apt install ssh
 ssh-keygen -t ed25519 # type "Enter" to continue
 cat ~/.ssh/id_ed25519.pub # copy and paste to 3rd party inputs
 chmod 600 ~/.ssh/id_ed25519
 
 # --- tmux ---
+
 sudo apt install tmux -y
 tmux new -A -s main # detouch using Ctrl + b -> d`
 
 # --- git ---
+
 sudo apt update && sudo apt install git
 git config --global user.name "Andyou"
 git config --global user.email "andyou@animagram.jp"
@@ -80,10 +85,8 @@ git diff --numstat branch1 branch2 # to confirm branches diff counts # count dif
 sudo chown 1000:1000 -R . && git clean -fd # checkout aborting diffs
 
 # --- uv ---
-curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# --- claude code ---
-curl -fsSL https://claude.ai/install.sh | bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Docker
@@ -111,11 +114,16 @@ gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\
 
 ## Nginx
 
+```bash
+sudo nginx -t && sudo systemctl reload nginx
+```
+
 ```nginx
 # /etc/nginx/nginx.conf
 
-user www-data;
-worker_processes 1; # for local developmentment
+# for local developmentment
+user user;
+worker_processes 1;
 ```
 
 ## Rust
