@@ -22,9 +22,10 @@ wsl -d Debian
 # code C:\Users\{user}\.wslconfig
 
 [wsl2]
-memory=8GB
+memory=10GB
 swap=2GB
 networkingMode=mirrored
+firewall=false
 
 [boot]
 systemd=true
@@ -61,7 +62,6 @@ sudo rm -f /etc/apt/sources.list.d/{repogitory}.list
 sudo apt purge cloud-init
 sudo rm -rf /etc/cloud /var/lib/cloud
 sudo apt install nano && sudo apt purge vim-tiny vim
-sudo apt autoremove
 
 # --- ssh ---
 
