@@ -73,7 +73,7 @@ chmod 600 ~/.ssh/id_ed25519
 # --- tmux ---
 
 sudo apt install tmux -y
-tmux new -A -s main # detouch using Ctrl + b -> d`
+tmux new -A -s main # detouch using Ctrl + b -> d
 
 # --- git ---
 
@@ -115,15 +115,69 @@ gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\
 ## Nginx
 
 ```bash
-sudo nginx -t && sudo systemctl reload nginx
+sudo apt update && sudo apt upgrade -y && sudo apt install nginx
+
+# === Server distribution ===
+sudo systemctl enable && sudo nginx -t && sudo systemctl reload-or-restart nginx
+
+# === Local distribution ===
+sudo local.conf /etc/nginx/conf.d/local.conf && sudo cp local.snippet.conf /etc/nginx/snippets/local.conf && sudo nginx -t && sudo systemctl reload-or-restart nginx
 ```
 
 ```nginx
-# /etc/nginx/nginx.conf
+# sudo nano /etc/nginx/nginx.conf
 
-# for local developmentment
+# Local distribution
 user user;
 worker_processes 1;
+```
+
+```nginx
+# local.conf (/etc/nginx/conf.d/local.conf)
+
+# --- server template  ---
+server {
+    listen 127.0.0.1:{port};
+    server_name localhost;
+    root /home/user/w/{path};
+    include snippets/local.conf;
+}
+```
+
+```nginx
+# local.snippet.conf (/etc/nginx/snippets/local.conf)
+
+absolute_redirect off;
+
+autoindex on;
+charset utf-8;
+
+# --- No cache ---
+add_header Cache-Control "no-store, no-cache, must-revalidate" always;
+etag off;
+if_modified_since off;
+open_file_cache off;
+sendfile off;
+
+# --- MIME ---
+default_type text/plain;
+
+# --- Exclusion ---
+location ~ /\. {
+    deny all;
+}
+
+location / {
+    index index.html;
+    try_files $uri $uri/ =404;
+}
+```
+
+## Cloudflared
+
+```bash
+# Issue temporary https domain
+tmux new -A -s tmp && cloudflared tunnel --url http://localhost:{port} # detouch using Ctrl + b -> d
 ```
 
 ## Rust
