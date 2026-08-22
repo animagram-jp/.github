@@ -135,11 +135,11 @@ worker_processes 1;
 ```nginx
 # local.conf (/etc/nginx/conf.d/local.conf)
 
-# --- server template  ---
+# === Template ===
 server {
     listen 127.0.0.1:{port};
     server_name localhost;
-    root /home/user/w/{path};
+    root /home/{user}/w/{repository}/distribution;
     include snippets/local.conf;
 }
 ```
@@ -152,17 +152,17 @@ absolute_redirect off;
 autoindex on;
 charset utf-8;
 
-# --- No cache ---
+# === No cache ===
 add_header Cache-Control "no-store, no-cache, must-revalidate" always;
 etag off;
 if_modified_since off;
 open_file_cache off;
 sendfile off;
 
-# --- MIME ---
+# === MIME ===
 default_type text/plain;
 
-# --- Exclusion ---
+# === Exclusion ===
 location ~ /\. {
     deny all;
 }
