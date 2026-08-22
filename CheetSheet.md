@@ -39,7 +39,7 @@ systemd=true
 | Debian stable slim | 2 years |
 
 ```bash
-# --- apt ---
+# === apt ===
 
 # upgrade distribution dependencies
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
@@ -48,8 +48,7 @@ mkdir -p w # make a user's working root
 # exclude recommend dependencies when apt install
 echo 'APT::Install-Recommends "false";' | sudo tee /etc/apt/apt.conf.d/99no-recommends
 
-# get host version
-
+# host information
 uname -a # linux kernel version
 cat /etc/os-release # apt distribution version
 cat /etc/apt/sources.list
@@ -63,19 +62,19 @@ sudo apt purge cloud-init
 sudo rm -rf /etc/cloud /var/lib/cloud
 sudo apt install nano && sudo apt purge vim-tiny vim
 
-# --- ssh ---
+# === ssh ===
 
 sudo apt install ssh
 ssh-keygen -t ed25519 # type "Enter" to continue
 cat ~/.ssh/id_ed25519.pub # copy and paste to 3rd party inputs
 chmod 600 ~/.ssh/id_ed25519
 
-# --- tmux ---
+# === tmux ===
 
 sudo apt install tmux -y
 tmux new -A -s main # detouch using Ctrl + b -> d
 
-# --- git ---
+# === git ===
 
 sudo apt update && sudo apt install git
 git config --global user.name "Andyou"
@@ -84,7 +83,7 @@ git config --global user.email "andyou@animagram.jp"
 git diff --numstat branch1 branch2 # to confirm branches diff counts # count diff
 sudo chown 1000:1000 -R . && git clean -fd # checkout aborting diffs
 
-# --- uv ---
+# === uv ===
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
