@@ -92,9 +92,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 - [Docker: installation](https://docs.docker.com/engine/install)
 - [Docker: rootless](https://docs.docker.com/engine/security/rootless/)
-- set up: `sudo usermod -aG docker $USER && newgrp docker && docker login -u "" -p ""`
 
 ```bash
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin # docker-compose-plugin
+docker login -u "" -p ""
+
 docker ps -aq | xargs -r docker stop
 docker ps -aq | xargs -r docker rm
 
@@ -117,7 +119,7 @@ gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\
 sudo apt update && sudo apt upgrade -y && sudo apt install nginx
 
 # === Server distribution ===
-sudo systemctl enable && sudo nginx -t && sudo systemctl reload-or-restart nginx
+sudo systemctl enable nginx && sudo nginx -t && sudo systemctl reload-or-restart nginx
 
 # === Local distribution ===
 sudo local.conf /etc/nginx/conf.d/local.conf && sudo cp local.snippet.conf /etc/nginx/snippets/local.conf && sudo nginx -t && sudo systemctl reload-or-restart nginx
