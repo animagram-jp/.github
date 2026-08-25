@@ -119,6 +119,10 @@ gsudo pwsh -NoProfile -Command "Optimize-VHD -Path 'C:AppData\Local\wsl\{token}\
 sudo apt update && sudo apt upgrade -y && sudo apt install nginx
 
 # === Server distribution ===
+sudo mkdir -p /var/www/html/{project}/
+sudo chown -R {user}:{user} /var/www/html/project}/
+sudo chmod -R 755 /var/www/html/project}/
+sudo systemctl edit nginx # See below (/etc/systemd/system/nginx.service.d/override.conf)
 sudo systemctl enable nginx && sudo nginx -t && sudo systemctl reload-or-restart nginx
 
 # === Local distribution ===
@@ -126,6 +130,14 @@ sudo local.conf /etc/nginx/conf.d/local.conf && sudo cp local.snippet.conf /etc/
 ```
 
 ```nginx
+# sudo systemctl edit nginx
+# /etc/systemd/system/nginx.service.d/override.conf
+[Service]
+Restart=on-failure
+RestartSec=5s
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
 # sudo nano /etc/nginx/nginx.conf
 
 # Local distribution
