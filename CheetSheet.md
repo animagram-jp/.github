@@ -120,8 +120,8 @@ sudo apt update && sudo apt upgrade -y && sudo apt install nginx
 
 # === Server distribution ===
 sudo mkdir -p /var/www/html/{project}/
-sudo chown -R {user}:{user} /var/www/html/project}/
-sudo chmod -R 755 /var/www/html/project}/
+sudo chown -R {user}:{user} /var/www/html/{project}/
+sudo chmod -R 755 /var/www/html/{project}/
 sudo systemctl edit nginx # See below (/etc/systemd/system/nginx.service.d/override.conf)
 sudo systemctl enable nginx && sudo nginx -t && sudo systemctl reload-or-restart nginx
 
