@@ -95,7 +95,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin # docker-compose-plugin
-docker login -u "" -p ""
+
+docker login -u "{user}" -p "{password}"
+docker login dhi.io -u "{user}" -p "{password}"
 
 docker ps -aq | xargs -r docker stop
 docker ps -aq | xargs -r docker rm
@@ -104,8 +106,6 @@ docker system df             # disk usage
 docker system prune          # delete unused 
 sudo rm -rf /var/lib/docker/ /var/lib/containerd # delete all
 ```
-
-note: containerd.io docker-ce docker-ce-cli docker-buildx-plugin for minimum install
 
 ```powershell
 # optimize vhdx in Powershell
