@@ -1,8 +1,8 @@
 ---
-name: controverse
+name: controversy
 about: Issue a controverse what we should talk about.
-title: "[controverse]"
-labels: controverse
+title: "[controversy]"
+labels: controversy
 assignees: "Andyou007"
 ---
 
