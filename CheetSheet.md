@@ -280,6 +280,15 @@ updates:
 
 ---
 
+## Font
+
+```css
+--font-family-sans: "IBM Plex Sans", "Noto Sans JP", "BIZ UDPGothic", "Hiragino Sans", sans-serif;
+--font-family-mono: "Fira Code", "BIZ UDGothic";
+```
+
+---
+
 ## National holidays (JP)
 
 ```bash
