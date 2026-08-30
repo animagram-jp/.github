@@ -283,8 +283,8 @@ updates:
 ## Font
 
 ```css
---font-family-sans: "IBM Plex Sans", "Noto Sans JP", "BIZ UDPGothic", "Hiragino Sans", sans-serif;
---font-family-mono: "Fira Code", "BIZ UDGothic";
+--font-family-sans-serif: "IBM Plex Sans", "Noto Sans JP", "BIZ UDPGothic", "Hiragino Sans", sans-serif;
+--font-family-monospace: "Fira Code", "BIZ UDGothic", monospace;
 ```
 
 ---
