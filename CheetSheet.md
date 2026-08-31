@@ -6,11 +6,9 @@
 
 ```powershell
 # Excute Windows Powershell as Administrator
-
-winget update && winget upgrade winget
-winget install gsudo bootandy.dust
-gsudo winget install Microsoft.PowerShell
-gsudo winget update && gsudo winget upgrade --all
+# Also activate sudo option
+sudo winget update && sudo winget upgrade --all
+sudo winget install Microsoft.PowerShell bootandy.dust
 
 # add WSL
 wsl --list --verbose
