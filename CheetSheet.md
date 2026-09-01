@@ -191,6 +191,9 @@ location / {
 ## Cloudflared
 
 ```bash
+# Apply cloudflared upgraded
+sudo systemctl restart cloudflared.service
+
 # Issue temporary https domain
 tmux new -A -s tmp && cloudflared tunnel --url http://localhost:{port} # detouch using Ctrl + b -> d
 ```
