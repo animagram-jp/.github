@@ -128,7 +128,7 @@ sudo systemctl edit nginx # See below (/etc/systemd/system/nginx.service.d/overr
 sudo systemctl enable nginx && sudo nginx -t && sudo systemctl reload-or-restart nginx
 
 # === Local distribution ===
-sudo local.conf /etc/nginx/conf.d/local.conf && sudo cp local.snippet.conf /etc/nginx/snippets/local.conf && sudo nginx -t && sudo systemctl reload-or-restart nginx
+sudo cp ./local.conf /etc/nginx/conf.d/local.conf && sudo cp ./local.snippet.conf /etc/nginx/snippets/local.conf && sudo nginx -t && sudo systemctl reload-or-restart nginx
 ```
 
 ```nginx
