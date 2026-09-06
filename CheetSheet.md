@@ -7,7 +7,7 @@
 ```powershell
 # Excute Windows Powershell as Administrator
 # Also activate sudo option
-sudo winget update && sudo winget upgrade --all
+sudo winget upgrade --all ; winget upgrade --all
 sudo winget install Microsoft.PowerShell bootandy.dust
 
 # add WSL
