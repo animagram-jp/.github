@@ -110,9 +110,8 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 
 ### Dependency declaration
 
-- To ensure that all dependencies, including those not required for normal operation, can be identified, please declare all dependency references at the beginning of each file.
+- To ensure that all dependencies, including those not required, can be identified, declare all dependency references at the beginning of each file.
 - Additionally, to ensure consistency in the order and granularity of these declarations, verify this thoroughly for every file you edit upon completion of each task.
-- Order: `core` → `alloc` → `std` → `crate` → those with attributes (`core` → `alloc` → `std` → `crate`).
 
 ```rust
 // examples
@@ -120,7 +119,6 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 #![no_std]
 extern crate core;
 extern crate alloc;
-
 #[cfg(test)]
 extern crate std;
 
@@ -133,13 +131,13 @@ use alloc::{
     string::{String, ToString},
     vec::Vec,
 };
+#[cfg(test)]
+use std::fs;
+
 use crate::{
     list::{List, VariableList},
     debug_log,
 };
-
-#[cfg(test)]
-use std::fs;
 ```
 
 ### Error
