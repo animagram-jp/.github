@@ -48,7 +48,8 @@ echo 'APT::Install-Recommends "false";' | sudo tee /etc/apt/apt.conf.d/99no-reco
 
 # host information
 uname -a # linux kernel version
-cat /etc/os-release # apt distribution version
+cat /etc/os-release # distribution version
+free -h # memory size
 cat /etc/apt/sources.list
 sudo apt list --manual-installed
 # remove source repository
