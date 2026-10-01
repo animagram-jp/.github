@@ -95,7 +95,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin # docker-compose-plugin
 
-# Settings for server
+sudo systemctl disable --now docker.service docker.socket containerd.service
+
 systemctl --user enable docker
 loginctl enable-linger $USER
 
