@@ -100,6 +100,8 @@ sudo systemctl disable --now docker.service docker.socket containerd.service
 systemctl --user enable docker
 loginctl enable-linger $USER
 
+systemctl --user restart docker
+
 docker login -u "{user}" -p "{password}"
 docker login dhi.io -u "{user}" -p "{password}"
 
