@@ -1,6 +1,6 @@
 # Cheet sheet
 
-- update_at: 2026-08
+- update_at: 2026-10
 
 ## Powershell
 
