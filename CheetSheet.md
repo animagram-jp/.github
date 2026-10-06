@@ -24,6 +24,10 @@ memory=10GB
 swap=2GB
 networkingMode=mirrored
 firewall=false
+```
+
+```ini
+# /etc/wsl.conf
 
 [boot]
 systemd=true
