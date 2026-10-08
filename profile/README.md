@@ -5,7 +5,7 @@
 - Now I, Andyou am developing a new web system that can be ubiquitous for daily life.
 
 - Theme color: #5B2F91(sRGB: 91, 47, 145)
-- Common rules for development: [ORG_CONTRIBUTING.md](../.github/CONTRIBUTING.md)
+- [CONTRIBUTING.md (Common development rule)](../.github/CONTRIBUTING.md)
 
 ## Projects
 
