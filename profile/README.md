@@ -13,10 +13,10 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 
-Gui application system for editing and reading structured data.  
-Handles event loop by Wasm App.
+A general-purpose boilerplate for GUI applications that edit and read structured data.
+The application owns its own event loop and is designed to run on multiple host environments, such as WebAssembly in a browser or a native process.
 
-- materials: `no_std Rust`, `Web APIs`, `WebAssembly`, 
+- materials: `no_std Rust`, `WebAssembly`, `Web APIs`
 
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
@@ -42,13 +42,12 @@ Provides self-estimated forecast confidence.
 Declarative context management for request handlers.  
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
-- materials: `YAML`, `no_std Rust`
+- materials: `no_std Rust`, `YAML`
 
 ### [css](https://github.com/animagram-jp/css)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
 
-Universal design css library.  
-Works without interference to HTML.
+Universal Design (variants included) system and DOM implements. 
 
-- materials: `CSS`, `HTML`
+- materials: `CSS`, `Jaavascript`, `Document Object Model (DOM)`
