@@ -14,7 +14,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
 
 A general-purpose boilerplate for GUI applications that edit and read structured data.
-The application owns its own event loop and is designed to run on multiple host environments, such as WebAssembly in a browser or a native process.
+The application owns a single event loop and is designed to run on multiple host environments, such as WebAssembly in a browser.
 
 - materials: `no_std Rust`, `WebAssembly`, `Web APIs`
 
