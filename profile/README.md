@@ -1,11 +1,11 @@
 # animagram
 
-- The word "anima" is name of concepts and existences.
+- The word "anima" is the name of concepts and existences.
 - The word "gram" is name of written expression (human language or commands to computers).
-- Now I, Andyou am developing a new web system that can be ubiquitous for daily life.
+- Now I, Andyou am currently developing a new web system that can be ubiquitous in daily life.
 
-- Theme color: #5B2F91(sRGB: 91, 47, 145)
-- Common development rule: [CONTRIBUTING.md](../.github/CONTRIBUTING.md)
+- Theme color: `#5B2F91`(sRGB: `91, 47, 145`)
+- Common development rules: [CONTRIBUTING.md](../.github/CONTRIBUTING.md)
 
 ## Projects
 
