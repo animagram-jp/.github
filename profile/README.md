@@ -16,7 +16,7 @@
 A general-purpose boilerplate for GUI applications that edit and read structured data.
 The application owns a single event loop and is designed to run on multiple host environments, such as WebAssembly in a browser.
 
-Built with `no_std Rust`, `WebAssembly`, `Web APIs`.
+Built with `no_std Rust`, `WebAssembly`, `Web APIs`, `JavaScripts`.
 
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
@@ -50,4 +50,4 @@ Built with`no_std Rust`, `YAML`.
 
 Universal Design (variants included) system and DOM implements. 
 
-Built with `CSS`, `Jaavascript`, `Document Object Model (DOM)`.
+Built with `CSS`, `Document Object Model (DOM)`.
