@@ -16,7 +16,7 @@
 A general-purpose boilerplate for GUI applications that edit and read structured data.
 The application owns a single event loop and is designed to run on multiple host environments, such as WebAssembly in a browser.
 
-- materials: `no_std Rust`, `WebAssembly`, `Web APIs`
+Built with `no_std Rust`, `WebAssembly`, `Web APIs`.
 
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
@@ -24,7 +24,7 @@ The application owns a single event loop and is designed to run on multiple host
 
 Region operations on rectilinear grids with arbitrary unit systems.
 
-- materials: `no_std Rust`
+Built with `no_std Rust`.
 
 ### [flair](https://github.com/animagram-jp/flair)
 
@@ -33,7 +33,7 @@ Region operations on rectilinear grids with arbitrary unit systems.
 Wasm-compilable implement of time series forecasting algorithm FLAIR.  
 Provides self-estimated forecast confidence.
 
-- materials: `FLAIR`, `SVD`, `no_std Rust`
+Built with `FLAIR`, `SVD`, `no_std Rust`.
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
@@ -42,7 +42,7 @@ Provides self-estimated forecast confidence.
 Declarative context management for request handlers.  
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
-- materials: `no_std Rust`, `YAML`
+Built with`no_std Rust`, `YAML`.
 
 ### [css](https://github.com/animagram-jp/css)
 
@@ -50,4 +50,4 @@ Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 Universal Design (variants included) system and DOM implements. 
 
-- materials: `CSS`, `Jaavascript`, `Document Object Model (DOM)`
+Built with `CSS`, `Jaavascript`, `Document Object Model (DOM)`.
