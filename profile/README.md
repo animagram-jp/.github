@@ -30,10 +30,10 @@ Built with `no_std Rust`.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
 
-Wasm-compilable implement of time series forecasting algorithm FLAIR.  
+Wasm-compilable implementation of time series forecasting algorithm FLAIR.  
 Provides self-estimated forecast confidence.
 
-Built with `FLAIR`, `SVD`, `no_std Rust`.
+Built with `no_std Rust`, `FLAIR(Factored Level And Interleaved Ridge)`.
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
@@ -48,6 +48,6 @@ Built with `no_std Rust`, `YAML`.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
 
-Universal Design (variants included) system and DOM implements. 
+Universal Design (variants included) system and CSS implementations. 
 
-Built with `CSS`, `Document Object Model`.
+Built with `CSS`.
