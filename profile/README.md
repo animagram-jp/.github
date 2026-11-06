@@ -18,6 +18,14 @@ The application owns a single event loop and is designed to run on multiple host
 
 Built with `no_std Rust`, `HTML`, `CSS`, `WebAssembly`, `JavaScripts`, `Web APIs`.
 
+### [css](https://github.com/animagram-jp/css)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
+
+Universal Design (variants included) system and CSS implementations. 
+
+Built with `CSS`.
+
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
@@ -43,11 +51,3 @@ Declarative context management for request handlers.
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 Built with `no_std Rust`, `YAML`.
-
-### [css](https://github.com/animagram-jp/css)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
-
-Universal Design (variants included) system and CSS implementations. 
-
-Built with `CSS`.
