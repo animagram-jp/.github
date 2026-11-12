@@ -15,4 +15,8 @@
 
 Please report a vulnerability via below URL:
 
-https://github.com/animagram-jp/{repository}/security/advisories/new
+- https://github.com/animagram-jp/app/security/advisories/new
+- https://github.com/animagram-jp/css/security/advisories/new
+- https://github.com/animagram-jp/context-engine/security/advisories/new
+- https://github.com/animagram-jp/flair/security/advisories/new
+- https://github.com/animagram-jp/rectgrid/security/advisories/new
