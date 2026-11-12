@@ -15,4 +15,4 @@
 
 Please report a vulnerability via below URL:
 
-- https://github.com/animagram-jp/{repository}/security/advisories/new
+https://github.com/animagram-jp/{repository}/security/advisories/new
