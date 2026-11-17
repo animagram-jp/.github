@@ -1,0 +1,346 @@
+id	summary	refs
+1.1.1	外部入力は、仕様で決まったエンコード（URLエンコード、HTMLエスケープなど）だけを、検証より前に1回解除する。値の見た目から推測して解除しない	
+1.1.2		
+1.2.1	HTTPレスポンスやHTML、XMLの出力は、文脈（HTML要素、属性、コメント、CSS、HTTPヘッダ）ごとに合ったエンコードを使い、データの構造を書き換えられないようにする	IPA 5-(i) / IPA 7-(i)-a / IPA 7-(i)-b
+1.2.2		IPA 5-(ii)
+1.2.3		IPA 5-(iii)
+1.2.4		PC C3.3 / IPA 1-(i)-a / IPA 1-(i)-b / IPA 1-(ii)
+1.2.5		IPA 2-(i) / IPA 2-(ii)
+1.2.6		
+1.2.7		
+1.2.8		
+1.2.9		
+1.2.10	CSVはRFC 4180に従ってエスケープし、表計算形式も含めて、先頭が=、+、-、@、タブ・NUL文字のセルは'を前置して数式として実行させない	
+1.3.1		IPA 5-(vi) / IPA 5-(vii)
+1.3.2		
+1.3.3		IPA 7-(ii)
+1.3.4		
+1.3.5		IPA 5-(iv)
+1.3.6		PC C10
+1.3.7		
+1.3.8		
+1.3.9		
+1.3.10		
+1.3.11		IPA 8-(i)-a / IPA 8-(i)-b / IPA 8-(ii) / IPA 8-(iii)
+1.3.12		
+1.4.1		ANSSI UNSAFE-NOUB / ANSSI LANG-UNSAFE / ANSSI LANG-ARRINDEXING / ANSSI MEM-NORAWPOINTER / ANSSI FFI-CK-PTR-VALID / ANSSI FFI-INPUT-PTR / ANSSI FFI-CK-INPUT-REF-VALID / ANSSI FFI-MARKEDFUNPTR / ANSSI FFI-CKFUNPTR / ANSSI FFI-CK-REF-MODEL / IPA 10-(i)-a / IPA 10-(i)-b
+1.4.2		ANSSI LANG-ARITH / ANSSI DENV-CARGO-OPTS
+1.4.3		ANSSI MEM-NO-LEAK / ANSSI MEM-LEAK / ANSSI MEM-FORGET / ANSSI MEM-FORGET-LINT / ANSSI MEM-MANUALLYDROP / ANSSI MEM-INTOFROMRAWALWAYS / ANSSI MEM-INTOFROMRAWONLY / ANSSI MEM-MUT-REC-RC / ANSSI LANG-DROP-NO-CYCLE / ANSSI FFI-MEM-OWNER / ANSSI FFI-MEM-WRAPPING / ANSSI FFI-MEM-NODROP
+1.5.1		
+1.5.2		PC C3.4
+1.5.3	同じ形式のデータ（JSON、XML、URLなど）を複数のパーサーで扱う場合は、文字コードを含む解釈のアルゴリズムが等価であることを確認し、同じ入力から異なる値を出力させない	
+2.1.1		
+2.1.2		
+2.1.3		
+2.2.1		PC C3.1 / PC C3.2 / IPA 5-(v)
+2.2.2		
+2.2.3		
+2.3.1		
+2.3.2		
+2.3.3		
+2.3.4		
+2.3.5		
+2.4.1		
+2.4.2		
+3.1.1		
+3.2.1		
+3.2.2		
+3.2.3		
+3.3.1		PC C7.4 / IPA 4-(iii)
+3.3.2		
+3.3.3		
+3.3.4		IPA 5-(ix)
+3.3.5		
+3.4.1		
+3.4.2		
+3.4.3		PC C8.2 / IPA 5-(x)
+3.4.4		
+3.4.5		PC C8.1
+3.4.6		PC C8.3 / IPA 9-(i)-a / IPA 9-(ii)
+3.4.7		
+3.4.8		
+3.5.1		PC C8.5 / IPA 6-(i)-a / IPA 6-(i)-c
+3.5.2		
+3.5.3		
+3.5.4		
+3.5.5		
+3.5.6		
+3.5.7		
+3.5.8		
+3.6.1		
+3.7.1		
+3.7.2		
+3.7.3		
+3.7.4		
+3.7.5		
+4.1.1		IPA 5-(viii)
+4.1.2		
+4.1.3		
+4.1.4		
+4.1.5		
+4.2.1		
+4.2.2		
+4.2.3		
+4.2.4		
+4.2.5		
+4.3.1		
+4.3.2		
+4.4.1		
+4.4.2		
+4.4.3		
+4.4.4		
+5.1.1		
+5.2.1		
+5.2.2		
+5.2.3		
+5.2.4		
+5.2.5		
+5.2.6		
+5.3.1		
+5.3.2		IPA 3-(i)-a / IPA 3-(i)-b / IPA 3-(iii)
+5.3.3		
+5.4.1		
+5.4.2		
+5.4.3		
+6.1.1		
+6.1.2		
+6.1.3		
+6.2.1		PC C7.1
+6.2.2		
+6.2.3		
+6.2.4		20ヶ条 12
+6.2.5		
+6.2.6		
+6.2.7		
+6.2.8		
+6.2.9		
+6.2.10		
+6.2.11		
+6.2.12		
+6.3.1		20ヶ条 8 / EC 構築 7
+6.3.2		20ヶ条 11
+6.3.3		IPA 11-(i) / EC 構築 10
+6.3.4		
+6.3.5		
+6.3.6		
+6.3.7		IPA 6-(ii) / EC 構築 11
+6.3.8		
+6.4.1		
+6.4.2		
+6.4.3		
+6.4.4		
+6.4.5		
+6.4.6		
+6.5.1		
+6.5.2		
+6.5.3		
+6.5.4		
+6.5.5		
+6.5.6		
+6.5.7		
+6.5.8		
+6.6.1		
+6.6.2		
+6.6.3		
+6.6.4		
+6.7.1		
+6.7.2		
+6.8.1		
+6.8.2		
+6.8.3		
+6.8.4		
+7.1.1		
+7.1.2		
+7.1.3		
+7.2.1		PC C7.2
+7.2.2		IPA 4-(v)
+7.2.3		IPA 4-(i)
+7.2.4		IPA 4-(iv)-a / IPA 4-(iv)-b
+7.3.1		
+7.3.2		IPA 4-(vi)
+7.4.1		
+7.4.2		
+7.4.3		
+7.4.4		
+7.4.5		
+7.5.1		
+7.5.2		
+7.5.3		IPA 6-(i)-b / IPA 9-(i)-b
+7.6.1		
+7.6.2		
+8.1.1		PC C1.1
+8.1.2		
+8.1.3		
+8.1.4		
+8.2.1		PC C1.2 / PC C1.4
+8.2.2		IPA 11-(ii)
+8.2.3		
+8.2.4		
+8.3.1		
+8.3.2		
+8.3.3		
+8.4.1		
+8.4.2		EC 構築 4 / EC 構築 5
+9.1.1		PC C7.3
+9.1.2		
+9.1.3		
+9.2.1		
+9.2.2		
+9.2.3		
+9.2.4		
+10.1.1		
+10.1.2		
+10.2.1		
+10.2.2		
+10.2.3		
+10.3.1		
+10.3.2		
+10.3.3		
+10.3.4		
+10.3.5		
+10.4.1		
+10.4.2		
+10.4.3		
+10.4.4		
+10.4.5		
+10.4.6		
+10.4.7		
+10.4.8		
+10.4.9		
+10.4.10		
+10.4.11		
+10.4.12		
+10.4.13		
+10.4.14		
+10.4.15		
+10.4.16		
+10.5.1		
+10.5.2		
+10.5.3		
+10.5.4		
+10.5.5		
+10.6.1		
+10.6.2		
+10.7.1		
+10.7.2		
+10.7.3		
+11.1.1		
+11.1.2		
+11.1.3		
+11.1.4		
+11.2.1		Badge crypto_call
+11.2.2		PC C2.3
+11.2.3		Badge crypto_keylength
+11.2.4		
+11.2.5		
+11.3.1		
+11.3.2		Badge crypto_published / Badge crypto_working / Badge crypto_weaknesses
+11.3.3		
+11.3.4		
+11.3.5		
+11.4.1		
+11.4.2		Badge crypto_password_storage
+11.4.3		
+11.4.4		
+11.5.1		Badge crypto_random
+11.5.2		
+11.6.1		
+11.6.2		
+11.7.1		
+11.7.2		ANSSI LANG-DROP-SEC
+12.1.1		
+12.1.2		Badge crypto_pfs
+12.1.3		
+12.1.4		
+12.1.5		
+12.2.1		PC C2.2 / 20ヶ条 7 / EC 構築 9
+12.2.2		
+12.3.1		
+12.3.2		
+12.3.3		
+12.3.4		
+12.3.5		
+13.1.1		
+13.1.2		
+13.1.3		
+13.1.4		OSPS-BR-07.02
+13.2.1		
+13.2.2		PC C1.5 / IPA 1-(iv)
+13.2.3		
+13.2.4		20ヶ条 15 / 20ヶ条 16
+13.2.5		
+13.2.6		
+13.3.1		OSPS-BR-07.01 / Badge no_leaked_credentials
+13.3.2		
+13.3.3		
+13.3.4		
+13.4.1		
+13.4.2		
+13.4.3		
+13.4.4		
+13.4.5		
+13.4.6		
+13.4.7		20ヶ条 1
+14.1.1		
+14.1.2		
+14.2.1		IPA 4-(ii)
+14.2.2		
+14.2.3		
+14.2.4		PC C2.1 / EC 構築 8
+14.2.5		
+14.2.6		
+14.2.7		
+14.2.8		
+14.3.1		
+14.3.2		
+14.3.3		
+15.1.1		OSPS-VM-05.01 / OSPS-VM-05.02
+15.1.2		OSPS-QA-02.01 / OSPS-QA-02.02 / OSPS-DO-06.01 / PC C6.1 / ANSSI DENV-CARGO-LOCK
+15.1.3		
+15.1.4		ANSSI LIBS-VETTING-DIRECT / ANSSI LIBS-VETTING-TRANSITIVE
+15.1.5		ANSSI MEM-UNINIT / ANSSI LANG-DROP
+15.2.1		OSPS-VM-04.02 / OSPS-VM-05.03 / Badge vulnerabilities_fixed_60_days / Badge vulnerabilities_critical_fixed / PC C6.2 / ANSSI LIBS-OUTDATED / ANSSI LIBS-AUDIT / IPA 10-(ii) / 20ヶ条 4 / 20ヶ条 9 / EC 構築 2 / EC 運用 1
+15.2.2		
+15.2.3		PC C4.4 / PC C5.1 / 20ヶ条 2 / 20ヶ条 10
+15.2.4		OSPS-BR-05.01
+15.2.5		ANSSI LANG-UNSAFE-ENCP / ANSSI FFI-SAFEWRAPPING / ANSSI FFI-CAPI
+15.3.1		
+15.3.2		
+15.3.3		
+15.3.4		
+15.3.5		ANSSI FFI-CTYPE / ANSSI FFI-TCONS / ANSSI FFI-AUTOMATE / ANSSI FFI-PFTYPE / ANSSI FFI-CKNONROBUST / ANSSI FFI-CKINRUST / ANSSI FFI-NOENUM / ANSSI FFI-R-OPAQUE / ANSSI FFI-C-OPAQUE / ANSSI LANG-CMP-INV / ANSSI LANG-CMP-DEFAULTS / ANSSI LANG-CMP-DERIVE
+15.3.6		
+15.3.7		
+15.4.1		ANSSI LANG-SYNC-TRAITS
+15.4.2		
+15.4.3		
+15.4.4		
+16.1.1		EC 構築 12
+16.2.1		
+16.2.2		
+16.2.3		
+16.2.4		
+16.2.5		
+16.3.1		
+16.3.2		
+16.3.3		PC C9
+16.3.4		
+16.4.1		
+16.4.2		EC 構築 13
+16.4.3		
+16.5.1		IPA 1-(iii) / 20ヶ条 5
+16.5.2		
+16.5.3		ANSSI LANG-LIMIT-PANIC / ANSSI LANG-LIMIT-PANIC-SRC / ANSSI LANG-DROP-NO-PANIC / ANSSI LANG-ERRWRAP
+16.5.4		ANSSI FFI-NOPANIC
+17.1.1		
+17.1.2		
+17.2.1		
+17.2.2		
+17.2.3		
+17.2.4		
+17.2.5		
+17.2.6		
+17.2.7		
+17.2.8		
+17.3.1		
+17.3.2		

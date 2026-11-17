@@ -6,6 +6,7 @@
 
 - Theme color: `#5B2F91`(sRGB: `91, 47, 145`)
 - Common development rules: [CONTRIBUTING.md](../.github/CONTRIBUTING.md)
+- Common quality checklist: [quality_checklist](../quality_checklist/README.md)
 
 ## Projects
 
