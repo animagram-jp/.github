@@ -1,21 +1,17 @@
-# Common Rules
-
 These are the common rules for development. This content applies to everyone, whether human or not.  
 The top priority is keeping the codebase in a state where the person in charge can stay comprehensively aware of every element in it.  
 For cases where the rules below don't apply, use judgment that serves this goal.  
 
----
+# Operations
 
-## Operations
-
-### Base paths
+## Base paths
 
 | Path | Content |
 |-|-|
 | `./README.md` | The first document to read. Describes the software, release schedule, quick start, provided API, etc. |
 | `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only, and the authors' names. |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
-| `./src/` | Root directory for scripts maintainers write. For projects with multiple stacks, use `{stack_name}/src/` instead. |
+| `./src/` | Root directory for scripts maintainers write. For projects with multiple stacks, use `<stack_name>/src/` instead. |
 | `./reference/` | Root directory for reference material. |
 | `./artifact/` | Root directory for artifacts: files that can be regenerated. |
 | `./distribution/` | Root directory for what this repo distributes to users. Preferred over `./reference/` and `./artifact/` when content fits either. |
@@ -34,7 +30,7 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 /distribution/*
 ```
 
-#### Beginning of CONTRIBUTING.md
+### Beginning of CONTRIBUTING.md
 
 Read [ORG_CONTRIBUTING.md](./ORG_CONTRIBUTING.md).  
 If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working environment, download it by executing the following.  
@@ -43,7 +39,7 @@ If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working e
 curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/repos/animagram-jp/.github/contents/.github/CONTRIBUTING.md?ref=main" -o "ORG_CONTRIBUTING.md"
 ```
 
-### Issue
+## Issue
 
 - Anyone can create issues at any time. Maintainers may clean these up at any time.
 - Attach tags as below:
@@ -54,23 +50,41 @@ curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/
 | controversy | What we should talk about. | #5B2F91 |
 | improvement | A way to improve the repository. | #35A16B |
 
-### Git
+## Git branch
 
 - Deploy targets must always be versioning tags without a v-prefix. In principle, they should be created on the "main" (or "staging") branch.
-- Depending on the scale of the repository, additional branches such as "develop" or "feature/{ISSUE_NUMBER}" may be used ([reference: Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)). Delete unnecessary branches as you go.
+- Depending on the scale of the repository, additional branches such as "develop" or `feature/<ISSUE_NUMBER>` may be used ([reference: Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)). Delete unnecessary branches as you go.
 - Deploy targets for "staging" use version tags in the `0.x.x` series.
 
----
+## Commit message
 
-## Writing
+- Use the simplified Conventional Commits format `<type>[(<scope>)][: <keyword>]`.
+    e.g., `add(rs): geometry`, `fix(lib.rs, app.rs)`, `clean(toml, md)`
+- At least one of `scope` or `keyword` is required.
+
+| Field | Value | Meaning |
+|-|-|-|
+| type | add | Adding a new item. |
+|  | clean | Deleting, tidying up, and unifying the format, combined in one change. |
+|  | delete | Deleting an item. |
+|  | fix | Fixing a bug. |
+|  | rename | Changing a name. |
+|  | update | Changing the content of an existing item. |
+| scope | `<extension>` | e.g., rs, css, toml, md |
+|  | `<filename>` | e.g., lib.rs |
+|  | `<module name>` | e.g., calendar, server |
+| keyword | `<function name>` | e.g., new |
+|  | `<feature>` | e.g., PDF export |
+
+# Writing
 
 This is for easy reading by human and computers.
 The following example uses Rust. When using a different stack, adapt it accordingly.
 
 - Use 4 spaces (0x20) for indentation.
-- State on the 1st line `// This file includes untranslated text (ja).` when needed.
+- When a document is written in a language other than English, state it in the front matter: `lang: ja` and `translations: none`.
 
-### Naming
+## Name
 
 Computers can fail to handle uppercase, full-width characters, and names starting with a digit.
 
@@ -95,20 +109,39 @@ Computers can fail to handle uppercase, full-width characters, and names startin
 | data file | file     | snake_case | Kebab-case is allowed. |
 |           | key      | snake_case | As above. |
 
-### Comment
+## Function
 
+- Name a function, excluding test functions, in the format `<verb | preposition>[_<adjective>]_<object>`.
+    e.g., `read_status`, `parse_allowlist`
+- Do not include in the name a word that already appears in the upper namespace (module or type), nor the object that appears in the arguments.
+    e.g., `file::read` rather than `file::read_file`
+- Name a test function with a declarative sentence that has a subject and a verb, and states the specification it verifies.
+    e.g., `decode_rejects_truncated_frame`
+- Do not put `test` or the module name as a prefix of a test function.
+- Use `_and_` in a test function name only when the truth of the two sides can never diverge in theory.
+
+## Quotation mark
+
+Where the choice between single and double quotes is not constrained, follow the below.
+
+- Always use double quotes where no nesting occurs.
+- Where nesting occurs, always fix the outer quote to double and use single quotes for the inner one.
+    e.g., `<div :class="'is-active'">`
+
+## Comment
+
+- Write comments in English.
 - Write an outer line DocComment for each public item.
 - Write inline comments only where necessary, for non-obvious reasons (why / why not).
 - Write a DocTest for each public function. Skip meaningless tests (e.g., Item:new) and comments.
 
-### Test
+## Test
 
 - Write unit tests that is not duplicating with DocTest.
 - Tests can depend on std::fs and the examples directory. Avoid inline dataset definitions.
-- Names of test functions should follow the format `{target}_{condition}` (omit test_).
 - When integration test, using the examples directory, in-memory mock implementations to verify exported functions.
 
-### Dependency declaration
+## Dependency declaration
 
 - To ensure that all dependencies, including those not required, can be identified, declare all dependency references at the beginning of each file.
 - Additionally, to ensure consistency in the order and granularity of these declarations, verify this thoroughly for every file you edit upon completion of each task.
@@ -140,7 +173,7 @@ use crate::{
 };
 ```
 
-### Error
+## Error
 
 An error is a variable representation of the point in a script where the code gives up on continuing or completing the intended operation, and instead transitions to safety-oriented handling. Safety-oriented handling means:
 1. Guaranteeing, via the variable itself, an appropriate response to the user (e.g. displaying an error message).
@@ -171,22 +204,17 @@ impl Display for ListError {
 }
 ```
 
-### Quotation mark
+## Html
 
-Where the choice between single and double quotes is not constrained, follow the below.
+### Id
 
-- Always use double quotes where no nesting occurs.
-- Where nesting occurs, always fix the outer quote to double and use single quotes for the inner one.
-    e.g., `<div :class="'is-active'">`
+- Automatically determined based on the parent tag after the body and its sequence number.
+- "_" = Parent-child segment separator. (e.g., main_div_section-1)
+- "-N" = Sequence number within the same tag. (e.g., span-3, th-2)
+- No sequence number = Only one in that hierarchy. (e.g., thead_tr, legend_h5)
 
-### Html
+### Format
 
-- Tag id rules:
-    - Automatically determined based on the parent tag after the body and its sequence number.
-    - "_" = Parent-child segment separator. (e.g., main_div_section-1)
-    - "-N" = Sequence number within the same tag. (e.g., span-3, th-2)
-    - No sequence number = Only one in that hierarchy. (e.g., thead_tr, legend_h5)
-- Formatting rules:
-    - Follow this order: `<tag, id, standard attribute, aria-label, class, custom attribute>`.
-    - Do not insert a line break before a closing tag.
-    - Insert a line break before the start of every tag.
+- Follow this order: `<tag, id, standard attribute, aria-label, class, custom attribute>`.
+- Do not insert a line break before a closing tag.
+- Insert a line break before the start of every tag.

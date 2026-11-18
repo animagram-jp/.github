@@ -1,4 +1,7 @@
-// This file includes untranslated text (ja).
+---
+lang: ja
+translations: none
+---
 
 ASVS 5.0を中心に、日本語で[References: 各品質チェックリスト](#References)を過不足なく網羅するための対応表。
 
