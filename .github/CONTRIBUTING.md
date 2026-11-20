@@ -76,6 +76,41 @@ curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/
 | keyword | `<function name>` | e.g., new |
 |  | `<feature>` | e.g., PDF export |
 
+## Sign-off
+
+- Every commit must carry a `Signed-off-by` trailer of its author. `git commit -s` adds it.
+- With the trailer, the contributor asserts the [Developer Certificate of Origin 1.1](https://developercertificate.org/) for that commit.
+- CI rejects a pull request that contains a commit without the trailer.
+
+## Pull request
+
+- A change reaches the "main" branch only through a pull request.
+- A pull request is accepted when all of the following hold:
+    - It follows [Writing](#writing).
+    - It adds or updates tests as stated in [Test](#test).
+    - Every status check passes.
+    - Every commit follows [Commit message](#commit-message) and [Sign-off](#sign-off).
+
+## Role
+
+| Role | Member | Responsibility | Access |
+|-|-|-|-|
+| Maintainer | [Andyou](https://github.com/Andyou007) | Review and merge of pull requests, release, vulnerability response, administration of the organization. | Owner of the GitHub organization, administrator of every repository, owner of the release destinations (crates.io, Cloudflare, GitHub Pages) and of the linked services (Codecov). |
+| Contributor | Anyone | Issues and pull requests. | None. |
+
+## Dependency
+
+- Selection: prefer no dependency. Add one only when writing and maintaining the function inside the repository costs more than auditing the dependency. A dependency must have a public repository and a license compatible with Apache-2.0.
+- Obtainment: Rust crates come from crates.io through cargo, npm packages from the npm registry through `npm ci`, and GitHub Actions from GitHub pinned by a full commit SHA. Lock files (`Cargo.lock`, `package-lock.json`) are committed for what a repository builds and deploys.
+- Tracking: Dependabot opens weekly update pull requests for every ecosystem declared in `.github/dependabot.yml`. CodeQL and OpenSSF Scorecard run in CI. Third-party works copied into a repository are listed in `./NOTICE`.
+
+## Release
+
+- A release is a version tag (see [Git branch](#git-branch)) and a GitHub Release of the same name.
+- The version follows Semantic Versioning and is never reused.
+- The release note lists the functional changes and the security fixes of the release, and the upgrade impact.
+- Releases are immutable. GitHub signs a release attestation that covers the tag, the commit and the assets. Verify it with `gh release verify <tag> --repo animagram-jp/<repository>`.
+
 # Writing
 
 This is for easy reading by human and computers.
