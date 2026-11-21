@@ -9,7 +9,7 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 | Path | Content |
 |-|-|
 | `./README.md` | The first document to read. Describes the software, release schedule, quick start, provided API, etc. |
-| `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only, and the authors' names. |
+| `./LICENSE` | States the license, either Apache-2.0 or GPL-3.0-only. |
 | `./CONTRIBUTING.md` | The common entrypoint for all developers. See [Beginning of CONTRIBUTING.md](#beginning-of-contributingmd) below. |
 | `./src/` | Root directory for scripts maintainers write. For projects with multiple stacks, use `<stack_name>/src/` instead. |
 | `./reference/` | Root directory for reference material. |
