@@ -30,7 +30,7 @@ For cases where the rules below don't apply, use judgment that serves this goal.
 /distribution/*
 ```
 
-### Beginning of CONTRIBUTING.md
+## Beginning of CONTRIBUTING.md
 
 Read [ORG_CONTRIBUTING.md](./ORG_CONTRIBUTING.md).  
 If "ORG_CONTRIBUTING.md" does not exist in the repository root of your working environment, download it by executing the following.  
@@ -166,6 +166,8 @@ Where the choice between single and double quotes is not constrained, follow the
 ## Comment
 
 - Write comments in English.
+- Prefer a syntax that needs no closing delimiter (e.g., `//`, `#`) for a comment that is semantically complete within a single line.
+- When writing a divider comment, repeat `-` or `=` exactly three times in a row (e.g., `// --- size ---`).
 - Write an outer line DocComment for each public item.
 - Write inline comments only where necessary, for non-obvious reasons (why / why not).
 - Write a DocTest for each public function. Skip meaningless tests (e.g., Item:new) and comments.
