@@ -16,5 +16,5 @@ This applies to every participant, whether human or not, and to every interactio
 ## Enforcement
 
 - The maintainer may edit, hide or delete a comment, close an issue or a pull request, and block a participant from the organization.
-- Do not open a public issue for a problem. Report it privately to the public email of the maintainer listed in [Role](./CONTRIBUTING.md#role).
+- Do not open a public issue for a problem. Report it privately to the public email of the maintainer listed in [Role](https://github.com/animagram-jp/.github/blob/main/.github/CONTRIBUTING.md#role).
 - The maintainer keeps the identity of the reporter confidential.
