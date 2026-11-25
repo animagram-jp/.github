@@ -10,6 +10,12 @@
 
 ## Projects
 
+| Version | Meaning |
+|-|-|
+| `0.0.*` | Test release. |
+| `>=0.1.0` | Usable, but a minor update may require migration. |
+| `>=1.0.0` | Stable public API under [Semantic Versioning](https://semver.org/). |
+
 ### [app](https://github.com/animagram-jp/app)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
@@ -19,6 +25,11 @@ The application owns a single event loop and is designed to run on multiple host
 
 Built with `no_std Rust`, `HTML`, `CSS`, `WebAssembly`, `JavaScripts`, `Web APIs`.
 
+| Version | Schedule |
+|-|-|
+| `0.0.*` | Current. |
+| `>=0.1.0` | Publish a public demo that runs locally only, and start private use. |
+
 ### [css](https://github.com/animagram-jp/css)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
@@ -27,6 +38,11 @@ Universal Design (variants included) system and CSS implementations.
 
 Built with `CSS`.
 
+| Version | Schedule |
+|-|-|
+| `>=0.1.0` | Current. Used in some projects. |
+| `>=1.0.0` | Meets the requirements of a general-purpose public design system. A paper on UI is attempted. |
+
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
@@ -34,6 +50,11 @@ Built with `CSS`.
 Region operations on rectilinear grids with arbitrary unit systems.
 
 Built with `no_std Rust`.
+
+| Version | Schedule |
+|-|-|
+| `>=0.1.0` | Current. Used in some projects. |
+| `>=1.0.0` | Feedback from all dependents, including app, is applied. |
 
 ### [flair](https://github.com/animagram-jp/flair)
 
@@ -44,6 +65,11 @@ Provides self-estimated forecast confidence.
 
 Built with `no_std Rust`, `FLAIR(Factored Level And Interleaved Ridge)`.
 
+| Version | Schedule |
+|-|-|
+| `>=0.1.0` | Current. Not used by ourselves yet. |
+| `>=1.0.0` | Used by ourselves, with the feedback applied. |
+
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
@@ -52,3 +78,8 @@ Declarative context management for request handlers.
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
 
 Built with `no_std Rust`, `YAML`.
+
+| Version | Schedule |
+|-|-|
+| `>=0.1.0` | Current. Not used by ourselves yet. |
+| `>=1.0.0` | Used by ourselves, with the feedback applied. Otherwise, the repository may be archived. |
