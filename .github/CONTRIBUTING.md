@@ -107,7 +107,7 @@ curl -fsSL -H "Accept: application/vnd.github.raw+json" "https://api.github.com/
 ## Release
 
 - A release is a version tag (see [Git branch](#git-branch)) and a GitHub Release of the same name.
-- The version follows Semantic Versioning and is never reused.
+- The version follows [Semantic Versioning](https://semver.org/) and is never reused.
 - The release note lists the functional changes and the security fixes of the release, and the upgrade impact.
 - Releases are immutable. GitHub signs a release attestation that covers the tag, the commit and the assets. Verify it with `gh release verify <tag> --repo animagram-jp/<repository>`.
 
