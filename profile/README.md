@@ -18,7 +18,7 @@
 
 ### [app](https://github.com/animagram-jp/app)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/app?label=main)
+![GitHub tag](https://img.shields.io/github/v/tag/animagram-jp/app?sort=semver&label=version)
 
 A general-purpose boilerplate for GUI applications that edit and read structured data.
 The application owns a single event loop and is designed to run on multiple host environments, such as WebAssembly in a browser.
@@ -32,7 +32,7 @@ Built with `no_std Rust`, `HTML`, `CSS`, `WebAssembly`, `JavaScripts`, `Web APIs
 
 ### [css](https://github.com/animagram-jp/css)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/css/main?label=main)
+![GitHub tag](https://img.shields.io/github/v/tag/animagram-jp/css?sort=semver&label=version)
 
 Universal Design (variants included) system and CSS implementations. 
 
@@ -45,7 +45,7 @@ Built with `CSS`.
 
 ### [rectgrid](https://github.com/animagram-jp/rectgrid)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/rectgrid/main?label=main)
+![GitHub tag](https://img.shields.io/github/v/tag/animagram-jp/rectgrid?sort=semver&label=version)
 
 Region operations on rectilinear grids with arbitrary unit systems.
 
@@ -58,7 +58,7 @@ Built with `no_std Rust`.
 
 ### [flair](https://github.com/animagram-jp/flair)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/flair?label=main)
+![GitHub tag](https://img.shields.io/github/v/tag/animagram-jp/flair?sort=semver&label=version)
 
 Wasm-compilable implementation of time series forecasting algorithm FLAIR.  
 Provides self-estimated forecast confidence.
@@ -72,7 +72,7 @@ Built with `no_std Rust`, `FLAIR(Factored Level And Interleaved Ridge)`.
 
 ### [context-engine](https://github.com/animagram-jp/context-engine)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/animagram-jp/context-engine?label=main)
+![GitHub tag](https://img.shields.io/github/v/tag/animagram-jp/context-engine?sort=semver&label=version)
 
 Declarative context management for request handlers.  
 Eliminates the asymmetry between nodes in a system using a YAML DSL.
