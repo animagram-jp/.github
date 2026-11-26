@@ -15,12 +15,24 @@ ASVS 5.0を中心に、日本語で[References: 各品質チェックリスト](
 
 # 記録形式
 
+| Reference | Version |
+|-|-|
+| ASVS | 5.0.0 |
+| OSPS | v2026.08.28 |
+| Badge | commit dfb72c12398d |
+| PC | commit 4f5cb1081b42 |
+| ANSSI | commit 3f9e2e28095d |
+| IPA | 改訂第7版2021-03 |
+| 20ヶ条 | 2026-11-05 |
+| EC | 2026-11-05 |
+
 | Date | Project | Assignee | Identifier | Status | Note |
 |-|-|-|-|-|-|
 | 2026-11-09 | example | Andyou | `2.1.1` | Done | Input validation(`reference/ServerSide.md`)  |
 | 2026-11-09 | example | Andyou | `6.3.2` | To check | Password update of production accounts. |
 | 2026-11-09 | example | Andyou | `6.3.3` | Not yet | - |
 | 2026-11-09 | example | Andyou | `10.*.*` | No need | No use of OAuth nor OIDC. |
+| 2026-11-09 | example | Andyou | `15.2.1` | Exception | `<reason>; <alternative>; <residual risk>; <business impact>; <deadline>; <exit condition>; <approver>` |
 
 # References
 
@@ -31,7 +43,7 @@ ASVS 5.0を中心に、日本語で[References: 各品質チェックリスト](
 | asvs_5.0 | OWASP ASVS 5.0.0本文(md/)と配布物(csv, json) | 5.0.0 / commit 62981c68fd06 | https://github.com/OWASP/ASVS/tree/master/5.0 |
 | osps_baseline_2026.08.28 | OpenSSF OSPS Baseline各カテゴリ(OSPS-*.yaml)と用語集(lexicon.yaml) | v2026.08.28 | https://github.com/ossf/security-baseline/tree/v2026.08.28/baseline |
 | openssf_badge | OpenSSF Best Practices Badge基準(criteria.yml, criteria.md) | commit dfb72c12398d | https://github.com/coreinfrastructure/best-practices-badge |
-| proactive_controls_2024 | OWASP Top 10 Proactive Controls 2024 C1〜C10 | commit 4f5cb1081b42 | https://github.com/OWASP/www-project-proactive-controls/tree/master/docs/the-top-10 |
+| proactive_controls_wip | OWASP Top 10 Proactive Controls Future Top 10 (WIP) C1〜C10 | commit 4f5cb1081b42 | https://github.com/OWASP/www-project-proactive-controls/tree/master/docs/the-top-10 |
 | anssi_rust | ANSSI Secure Rust Guidelines英語版本文(md)とチェックリスト(checklist.html) | commit 3f9e2e28095d | https://github.com/ANSSI-FR/rust-guide / https://anssi-fr.github.io/rust-guide/checklist.html |
 | ipa_websecurity | 安全なウェブサイトの作り方(000017316.pdf, 115ページ)/セキュリティ実装 チェックリスト(000044403.xlsx) | 改訂第7版2021-03 | https://www.ipa.go.jp/security/vuln/websecurity/about.html |
 | ipa_20 | ウェブサイトのセキュリティ対策のチェックポイント20ヶ条 チェックリスト(000070296.xlsx)/解説ページ(sitecheck.html) | - | https://www.ipa.go.jp/security/vuln/websecurity/sitecheck.html |
@@ -202,7 +214,7 @@ asvs_summary.tsvのどのASVS項目にも紐付かない項目。
 | OWASP Application Security Verification Standard 5.0.0 | OWASP Foundation | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 要件の原文の抜粋、日本語への翻訳と要約 |
 | OpenSSF OSPS Baseline v2026.08.28 | Open Source Security Foundation | [Apache-2.0](../LICENSES/Apache-2.0.txt) | 要件の原文の抜粋と日本語の要約 |
 | OpenSSF Best Practices Badge基準 | The Linux Foundation, the Institute for Defense Analyses, and other project contributors | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)以降 | 基準の原文の抜粋と日本語の要約 |
-| OWASP Top 10 Proactive Controls 2024 | OWASP Foundation | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 項目の原文の抜粋と日本語の要約 |
+| OWASP Top 10 Proactive Controls Future Top 10 (WIP)(commit 4f5cb1081b42) | OWASP Foundation | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 項目の原文の抜粋と日本語の要約 |
 | ANSSI Secure Rust Guidelines(commit 3f9e2e28095d、最終更新2026-05-18) | ANSSI | [Etalab-2.0](../LICENSES/etalab-2.0.md) | 規則の原文の抜粋と日本語の要約 |
 | IPA資料(Referencesのipa_websecurity、ipa_20、ipa_ec) | 独立行政法人情報処理推進機構 | IPAの利用条件(LicenseRef-IPA)。引用・転載時は機構名、資料名、URLを明記する | 項目の原文の抜粋と日本語の要約 |
 
