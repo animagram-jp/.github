@@ -14,8 +14,9 @@ SPDX-FileCopyrightText = [
   "The Linux Foundation, the Institute for Defense Analyses, and other project contributors",
   "ANSSI",
   "独立行政法人情報処理推進機構",
+  "CISA, NSA, FBI, ASD's ACSC, Cyber Centre, NUKIB, ANSSI, BSI, CERT-In, ACN, METI, NCO, NIS/NCSC, KISA, NCSC-NL, NCSC-NZ, NASK, NBU",
 ]
-SPDX-License-Identifier = "CC-BY-SA-4.0 AND Apache-2.0 AND CC-BY-3.0+ AND etalab-2.0 AND LicenseRef-IPA"
+SPDX-License-Identifier = "CC-BY-SA-4.0 AND Apache-2.0 AND CC-BY-3.0+ AND etalab-2.0 AND LicenseRef-IPA AND LicenseRef-TLP-CLEAR"
 
 [[annotations]]
 path = "quality_checklist/asvs_ja.tsv"

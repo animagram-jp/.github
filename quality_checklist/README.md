@@ -207,7 +207,7 @@ asvs_summary.tsvのどのASVS項目にも紐付かない項目。
 | asvs_ja.tsv | CC-BY-SA-4.0(OWASP ASVS 5.0.0の翻訳) |
 | asvs_summary.tsv | summary列はCC-BY-SA-4.0(OWASP ASVS 5.0.0の要約)、id列とrefs列はApache-2.0 |
 | sources.tsv | 行ごとに、reference列の資料のライセンス |
-| README.md | Remaining、Othersの各行は要約元の資料のライセンス、それ以外はApache-2.0 |
+| README.md | Remaining、Othersの各行は要約元の資料のライセンス、ASVS 15.1.2の表のSummary列は要約元の資料のライセンス、それ以外はApache-2.0 |
 
 | Source | Author | License | Changes |
 |-|-|-|-|
@@ -217,6 +217,7 @@ asvs_summary.tsvのどのASVS項目にも紐付かない項目。
 | OWASP Top 10 Proactive Controls Future Top 10 (WIP)(commit 4f5cb1081b42) | OWASP Foundation | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 項目の原文の抜粋と日本語の要約 |
 | ANSSI Secure Rust Guidelines(commit 3f9e2e28095d、最終更新2026-05-18) | ANSSI | [Etalab-2.0](../LICENSES/etalab-2.0.md) | 規則の原文の抜粋と日本語の要約 |
 | IPA資料(Referencesのipa_websecurity、ipa_20、ipa_ec) | 独立行政法人情報処理推進機構 | IPAの利用条件(LicenseRef-IPA)。引用・転載時は機構名、資料名、URLを明記する | 項目の原文の抜粋と日本語の要約 |
+| 2026 Minimum Elements for a Software Bill of Materials (SBOM) | CISA, NSA, FBI, ASD's ACSC, Cyber Centre, NUKIB, ANSSI, BSI, CERT-In, ACN, METI, NCO, NIS/NCSC, KISA, NCSC-NL, NCSC-NZ, NASK, NBU | [TLP:CLEAR](../LICENSES/LicenseRef-TLP-CLEAR.txt) | Summary of the data field definitions |
 
 # 各細目資料
 
@@ -246,3 +247,40 @@ for line in sys.stdin.read().splitlines():
 print(*list(seen)[:3000], sep="\n")
 ' > common_password.txt
 ```
+## ASVS 15.1.1
+
+脆弱性のある構成要素の対応期限は、脆弱性が公表された日と検知した日のうち早い方から数え、下表の短い方の日数とする(Critical・High 30日、Moderate 60日、Low 180日)。ライブラリ全般は、脆弱性の有無にかかわらず3か月に1回、更新を確認して更新する。
+
+| Source | Start | Critical | High | Moderate | Low |
+|-|-|-|-|-|-|
+| FedRAMP POA&M[^fedramp-poam] | Discovery | 30 days | 30 days | 90 days | 180 days |
+| OpenSSF Best Practices Badge `vulnerabilities_fixed_60_days`, `vulnerabilities_critical_fixed`[^badge-criteria] | Publicly known | 60 days (SHOULD fix all critical vulnerabilities rapidly after they are reported) | 60 days | 60 days | - |
+
+[^fedramp-poam]: [FedRAMP, "Plan of Action and Milestones (POA&M)"](https://fedramp.gov/legacy/playbook/csp/authorization/poam/)
+[^badge-criteria]: [OpenSSF Best Practices Badge, "Passing criteria"](https://www.bestpractices.dev/en/criteria/0)
+
+## ASVS 15.1.2
+
+SBOMはリリースごとに作り、推移的依存を含むすべての構成要素を、深さの下限なく載せる。埋められない項目は、作成者が知らない(unknown)のか開示しない(withheld)のかを明示する。構成要素の情報を新たに知ったときや誤りを直したときは、改訂版を出す。各項目は下表のとおり[^sbom-2026]。
+
+| Category | Element | Summary |
+|-|-|-|
+| SBOM Metadata | SBOM Author | Who produced the SBOM data (the operator of the tool, not the tool). |
+| SBOM Metadata | SBOM Author Signature | Digital signature of the SBOM author, to verify origin and integrity. |
+| SBOM Metadata | SBOM Data Format Name | Format in which the SBOM is written. |
+| SBOM Metadata | SBOM Data Format Version | Version of that format; avoid deprecated versions. |
+| SBOM Metadata | SBOM Generation Context | Lifecycle phase at which the SBOM was produced (e.g. before build, build, after build). |
+| SBOM Metadata | SBOM Timestamp | When the SBOM data was last changed (RFC 9557). |
+| SBOM Metadata | SBOM Tool Name | Tool used to produce or edit the SBOM. |
+| SBOM Metadata | SBOM Tool Version | Version of that tool, or unknown. |
+| SBOM Metadata | SBOM Version | Revision of the SBOM for a given component name and version. |
+| Component Data | Component Producer | Single organization that made the component, or unknown provenance. |
+| Component Data | Component Dependency Relationship | Which component includes or requires which, to build the dependency graph. |
+| Component Data | Component Hash Value | Hash of the executable artifact, or unknown. |
+| Component Data | Component Hash Algorithm | Algorithm of that hash, named per IANA. |
+| Component Data | Component Identifiers | All known identifiers for lookup (e.g. PURL, CPE). |
+| Component Data | Component License | License identifiers (e.g. SPDX), proprietary terms, or unknown. |
+| Component Data | Component Name | Name given by the producer, alternate names allowed. |
+| Component Data | Component Version | Version given by the producer, or unknown. |
+
+[^sbom-2026]: [CISA et al., "2026 Minimum Elements for a Software Bill of Materials (SBOM)", 2026-07-29](https://www.ic3.gov/CSA/2026/260729.pdf)

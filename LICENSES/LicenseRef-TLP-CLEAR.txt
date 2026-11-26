@@ -1,0 +1,11 @@
+2026 Minimum Elements for a Software Bill of Materials (SBOM)
+https://www.ic3.gov/CSA/2026/260729.pdf
+Publication: July 29, 2026
+
+This document is marked TLP:CLEAR. Disclosure is not limited. Sources may use TLP:CLEAR when information carries
+minimal or no foreseeable risk of misuse, in accordance with applicable rules and procedures for public release. Subject
+to standard copyright rules, TLP:CLEAR information may be distributed without restriction. For more information, see
+Traffic Light Protocol (TLP) Definitions and Usage.
+
+Traffic Light Protocol (TLP) Definitions and Usage
+https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage
